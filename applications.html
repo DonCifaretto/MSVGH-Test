@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		
+		<meta name="description" content="Careers at Marikina St. Vincent General Hospital Inc. - Explore healthcare and corporate career opportunities and share your resume with HR.">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+				
+  		<!-- SITE TITLE -->
+		<title>MSVGH - Careers & Opportunities</title>
+							
+		<!-- FAVICON AND TOUCH ICONS  -->
+		<link rel="shortcut icon" href="images/website logo.PNG" type="image/x-icon">
+		<link rel="icon" href="images/website logo.PNG" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 	
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet"> 
+
+		<!-- BOOTSTRAP CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+				
+		<!-- FONT ICONS -->
+		<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">		
+		<link href="css/flaticon.css" rel="stylesheet">
+
+		<!-- PLUGINS STYLESHEET -->
+		<link href="css/menu.css" rel="stylesheet">	
+		<link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+		<link href="css/magnific-popup.css" rel="stylesheet">	
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/jquery.datetimepicker.min.css" rel="stylesheet">
+				
+		<!-- TEMPLATE CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- RESPONSIVE CSS -->
+		<link href="css/responsive.css" rel="stylesheet"> 
+	
+
+		<!-- CAREER PAGE STYLES
+		============================================= -->
+		<style>
+			/* Simple Career Page */
+			#career-page {
+				background: #fff;
+			}
+
+			#career-hero {
+				padding: 85px 0 80px;
+				border-bottom: 1px solid #e9eef0;
+			}
+
+			.career-hero-copy {
+				max-width: 650px;
+				padding-right: 35px;
+			}
+
+			.career-hero-copy .section-id {
+				margin-bottom: 10px;
+			}
+
+			.career-hero-copy h1 {
+				margin-bottom: 18px;
+			}
+
+			.career-hero-copy p {
+				max-width: 600px;
+				line-height: 1.8;
+				margin-bottom: 25px;
+			}
+
+			.career-hero-image {
+				overflow: hidden;
+				height: 390px;
+			}
+
+			.career-hero-image img,
+			.career-photo img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform .45s ease;
+			}
+
+			.career-hero-image:hover img,
+			.career-photo:hover img {
+				transform: scale(1.025);
+			}
+
+			#career-images {
+				padding: 70px 0;
+			}
+
+			.career-section-title {
+				max-width: 700px;
+				margin: 0 auto 38px;
+				text-align: center;
+			}
+
+			.career-section-title p {
+				line-height: 1.8;
+			}
+
+			.career-photo {
+				height: 260px;
+				overflow: hidden;
+				background: #f3f5f6;
+			}
+
+			#career-opportunities {
+				padding: 75px 0;
+				background: #f7f9fa;
+			}
+
+			.career-opportunity {
+				height: 100%;
+				padding: 34px 32px;
+				background: #fff;
+				border: 1px solid #e5eaec;
+				transition: transform .25s ease, box-shadow .25s ease;
+			}
+
+			.career-opportunity:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 12px 30px rgba(0,0,0,.07);
+			}
+
+			.career-opportunity .icon {
+				font-size: 24px;
+				margin-bottom: 16px;
+				color: #16a34a;
+			}
+
+			.career-opportunity h4 {
+				margin-bottom: 12px;
+			}
+
+			.career-opportunity p {
+				line-height: 1.75;
+				margin-bottom: 18px;
+			}
+
+			.career-opportunity ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.career-opportunity li {
+				position: relative;
+				padding-left: 20px;
+				margin-bottom: 9px;
+				font-size: 14px;
+				line-height: 1.5;
+			}
+
+			.career-opportunity li:before {
+				content: "\f058";
+				position: absolute;
+				left: 0;
+				top: 1px;
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				color: #16a34a;
+			}
+
+			#career-application {
+				padding: 80px 0;
+			}
+
+			.career-application-copy {
+				padding-right: 45px;
+			}
+
+			.career-application-copy p {
+				line-height: 1.8;
+			}
+
+			.career-form-wrap {
+				padding: 35px;
+				border: 1px solid #e4e9eb;
+				background: #fff;
+			}
+
+			.career-form-wrap h3 {
+				margin-bottom: 8px;
+			}
+
+			.career-form-wrap > p {
+				margin-bottom: 25px;
+				font-size: 13px;
+				color: #718087;
+			}
+
+			.career-form .form-control {
+				margin-bottom: 14px;
+			}
+
+			.career-form .file-label {
+				display: block;
+				margin-bottom: 7px;
+				font-size: 13px;
+				font-weight: 700;
+				color: #555;
+			}
+
+			.career-form .form-btn {
+				margin-top: 5px;
+			}
+
+			.career-opportunity {
+    		text-align: center;
+			}
+
+			.career-opportunity ul {
+    		display: inline-block;
+    		text-align: left;
+			}
+
+			.career-opportunity li:before {
+    		content: "•";
+			font-family: inherit;
+			font-weight: 700;
+			color: #16a34a;
+			font-size: 18px;
+			}
+
+			.career-opportunity ul li {
+    		font-weight: 700;
+			}
+
+			
+
+			@media (max-width: 991px) {
+				#career-hero {
+					padding: 65px 0;
+				}
+
+				.career-hero-copy {
+					padding-right: 0;
+					margin-bottom: 35px;
+				}
+
+				.career-hero-image {
+					height: 330px;
+				}
+
+				.career-application-copy {
+					padding-right: 0;
+					margin-bottom: 35px;
+				}
+			}
+
+			@media (max-width: 767px) {
+				#career-images,
+				#career-opportunities,
+				#career-application {
+					padding: 55px 0;
+				}
+
+				.career-photo {
+					height: 230px;
+					margin-bottom: 20px;
+				}
+
+				.career-opportunity {
+					margin-bottom: 20px;
+				}
+
+				.career-form-wrap {
+					padding: 25px 20px;
+				}
+
+				
+			}
+		</style>
+
+	</head>
+
+
+
+
+	<body>
+
+
+
+
+		<!-- PRELOADER SPINNER
+		============================================= -->	
+		<div id="loader-wrapper">
+			<div id="loader"><div class="loader-inner"></div></div>
+		</div>
+
+
+
+
+		<!-- PAGE CONTENT
+		============================================= -->	
+		<div id="page" class="page">
+
+
+
+
+			<!-- HEADER
+			============================================= -->
+			<header id="header" class="header">
+
+
+				<!-- MOBILE HEADER -->
+			    <div class="wsmobileheader clearfix">
+			    	<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+			    	<span class="smllogo"><img src="images/logo.png" width="180" height="40" alt="mobile-logo"/></span>
+			    	<a href="tel:123456789" class="callusbtn"><i class="fas fa-phone"></i></a>
+			 	</div>
+
+
+			 	<!-- HEADER STRIP -->
+			 	<div class="headtoppart bg-blue clearfix">
+			    	<div class="headerwp clearfix">
+
+			    		<!-- Address -->
+			     		<div class="headertopleft">			     			
+			        		<div class="address clearfix"><span><i class="fas fa-map-marker-alt"></i>35 Bayan-Bayanan Ave., Concepcion Uno, Marikina City </span> <a href="tel:123456789" class="callusbtn"><i class="fas fa-phone"></i>(02)8948-0314</a>
+			            	</div>
+			     		</div>
+
+			     		<!-- Social Links -->
+					    <div class="headertopright">
+					    	<a class="googleicon" title="Google" href="#"><i class="fab fa-google"></i> <span class="mobiletext02">Google</span></a>
+					        <a class="linkedinicon" title="Linkedin" href="#"><i class="fab fa-linkedin-in"></i> <span class="mobiletext02">Linkedin</span></a>
+					        <a class="twittericon" title="Twitter" href="#"><i class="fab fa-twitter"></i> <span class="mobiletext02">Twitter</span></a>
+					        <a class="facebookicon" title="Facebook" href="#"><i class="fab fa-facebook-f"></i> <span class="mobiletext02">Facebook</span></a>
+				      	</div>
+
+				    </div>
+			  	</div>	<!-- END HEADER STRIP -->
+
+
+			  	<!-- NAVIGATION MENU -->
+			  	<div class="wsmainfull menu clearfix">
+    				<div class="wsmainwp clearfix">
+
+    					<!-- LOGO IMAGE -->
+    					<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80 pixels) -->
+    					<div class="desktoplogo"><a href="index.html"><img src="images/logo.png"  width="180" height="40" alt="header-logo"></a></div>
+
+    					<!-- MAIN MENU -->
+      					<nav class="wsmenu clearfix">
+        					<ul class="wsmenu-list">
+
+
+        						<!-- DROPDOWN MENU -->
+					        	<li aria-haspopup="true"><a href="index.html">Home </a>
+					           		
+					          	</li>	<!-- END DROPDOWN MENU -->
+
+
+					            	<!-- PAGES -->
+					          	<li aria-haspopup="true"><a href="#">Explore <span class="wsarrow"></span></a>
+            						<div class="wsmegamenu clearfix">
+             							<div class="container">
+               								<div class="row">
+
+               									<!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="index.html">Home</a></li>
+								                    <li><a href="history.html">History</a></li>
+								                    <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                   
+								                    <li><a href="all-services.html">All Services</a></li>
+								                    <li><a href="all-doctors.html">All Doctors</a></li>
+								                    <li><a href="doctors-timetable.html">Doctors Timetable</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                   
+								                    <li><a href="accreditations.html">Accreditations</a></li>
+								                    <li><a href="applications.html">Applications</a></li>
+								                    <li><a href="faqs.html">FAQs</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="contact us.html">Contact Us</a></li>
+								                    <li><a href="terms.html">Terms</a></li>
+								                </ul>
+
+							                </div>  <!-- End row -->	
+							            </div>  <!-- End container -->	
+							        </div>  <!-- End wsmegamenu -->	
+							    </li>	<!-- END PAGES -->
+
+
+
+					          	
+
+
+					          	
+
+							    
+							    <!-- SIMPLE NAVIGATION LINK -->
+							    <li class="nl-simple" aria-haspopup="true"><a href="terms.html">Patient's Responsibilities</a></li>
+
+							    <!-- NAVIGATION MENU BUTTON -->
+							    
+
+
+        					</ul>
+        				</nav>	<!-- END MAIN MENU -->
+
+    				</div>
+    			</div>	<!-- END NAVIGATION MENU -->
+
+
+			</header>	<!-- END HEADER -->
+
+
+			<!-- CAREER PAGE CONTENT
+			============================================= -->
+			<main id="career-page">
+
+				<!-- HERO -->
+				<section id="career-hero" class="division">
+					<div class="container">
+						<div class="row d-flex align-items-center">
+
+							<div class="col-lg-6">
+								<div class="career-hero-copy wow fadeInUp" data-wow-delay="0.2s">
+
+									<span class="section-id blue-color">CAREERS AT MSVGH</span>
+
+									<h1 class="h2-md steelblue-color">Build your career in healthcare.</h1>
+
+									<p>
+										Be part of a dynamic and compassionate healthcare community at
+										Marikina St. Vincent General Hospital. We are looking for skilled,
+										dedicated, and passionate professionals who want to make a meaningful
+										difference in the lives of our patients.
+									</p>
+
+									<a href="#career-application" class="btn btn-blue blue-hover">Submit an Application</a>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="career-hero-image wow fadeInUp" data-wow-delay="0.4s">
+									<img src="images/career-1.jpg" alt="Careers at Marikina St. Vincent General Hospital">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<!-- IMAGE ROW -->
+				<section id="career-images" class="division">
+					<div class="container">
+
+						<div class="career-section-title">
+							<span class="section-id blue-color">JOIN OUR TEAM</span>
+							<h3 class="h3-md steelblue-color">Make a difference.</h3>
+							<p>
+								Whether you're beginning your professional journey or bringing years of
+								experience, there's a place for you at MSVGH.
+							</p>
+						</div>
+
+						<div class="row">
+
+							<div class="col-md-4">
+								<div class="career-photo wow fadeInUp" data-wow-delay="0.2s">
+									<img src="images/department-heads.jpg" alt="MSVGH team">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="career-photo wow fadeInUp" data-wow-delay="0.4s">
+									<img src="images/career-2.jpg" alt="MSVGH workplace">
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="career-photo wow fadeInUp" data-wow-delay="0.6s">
+									<img src="images/career-3.jpg" alt="MSVGH healthcare professionals">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+				<!-- OPPORTUNITIES -->
+				<section id="career-opportunities" class="division">
+					<div class="container">
+
+						<div class="career-section-title">
+							<span class="section-id blue-color">CAREER OPPORTUNITIES</span>
+							<h3 class="h3-md steelblue-color">WE'RE HIRING!</h3>
+						</div>
+
+						<div class="row">
+
+							<div class="col-lg-6">
+								<div class="career-opportunity wow fadeInUp" data-wow-delay="0.2s">
+
+									<div class="icon"><i class="fas fa-user-md"></i></div>
+
+									<h4 class="h4-xs steelblue-color">Work in Healthcare</h4>
+
+									<p>
+										We are looking for passionate and skilled healthcare professionals
+										who are committed to delivering expert care with compassion.
+									</p>
+
+									<ul>
+										<li>Nurses</li>
+										<li>Doctors</li>
+										<li>Therapists</li>
+										<li>Allied health professionals</li>
+									</ul>
+
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="career-opportunity wow fadeInUp" data-wow-delay="0.4s">
+
+									<div class="icon"><i class="fas fa-briefcase"></i></div>
+
+									<h4 class="h4-xs steelblue-color">Work in Corporate &amp; Support</h4>
+
+									<p>
+										Our hospital also offers opportunities in the teams that keep
+										our organization moving and support quality patient care.
+									</p>
+
+									<ul>
+										<li>Administration</li>
+										<li>Marketing</li>
+										<li>Finance</li>
+										<li>Human resources and office operations</li>
+									</ul>
+
+								</div>
+
+								
+							</div>
+
+							<!-- JOB OPENING -->
+<div class="col-lg-8 offset-lg-2">
+    <div class="career-opportunity wow fadeInUp" data-wow-delay="0.2s">
+
+        <div class="icon"><i class="fas fa-briefcase"></i></div>
+
+        <h4 class="h4-xs steelblue-color">We're Hiring: Staff Nurse</h4>
+
+        <p>
+            We are currently looking for a qualified Staff Nurse to join our team.
+        </p>
+
+        <ul>
+            <li>Bachelor's Degree in Nursing</li>
+            <li>Must be a Registered Nurse</li>
+            <li>With updated PRC license</li>
+            <li>Minimum 1 year of experience in a hospital setting</li>
+            <li>Preferably within Marikina or residing in a nearby area</li>
+            <li>Full-time position</li>
+        </ul>
+
+        <p style="margin-top: 20px; margin-bottom: 0;">
+            Interested applicants may submit their Letter of Intent, Curriculum Vitae
+            with photo, and other credentials via email to
+            <strong>hr.msvgh@gmail.com</strong> or call the Human Resource Department
+            at <strong>8948-0314 (loc. 222)</strong> and look for
+            <strong>MARLON MALLAPRE</strong>.
+        </p>
+
+    </div>
+</div>
+
+						</div>
+					</div>
+				</section>
+
+				<!-- APPLICATION -->
+				<section id="career-application" class="division">
+					<div class="container">
+						<div class="row d-flex align-items-start">
+
+							<div class="col-lg-5">
+								<div class="career-application-copy wow fadeInUp" data-wow-delay="0.2s">
+
+									<span class="section-id blue-color">Be A Part of the MSVGH Community</span>
+
+									<h3 class="h3-md steelblue-color">Make a Difference. Grow With MSVGH.</h3>
+
+									<p>
+										Every career at Marikina St. Vincent General Hospital contributes to a healthier community. We are constantly searching for skilled, passionate individuals to bring their unique talents to our floor. Send over your resume and let’s talk about how your experience fits into our mission.
+									</p>
+
+									<p>
+										Please provide your contact information and
+										latest resume or CV.
+									</p>
+
+								</div>
+							</div>
+
+							<div class="col-lg-7">
+								<div class="career-form-wrap wow fadeInUp" data-wow-delay="0.4s">
+
+									<h3 class="h4-sm steelblue-color">Submit your application</h3>
+									<p>Your application will be forwarded to the HR office.</p>
+
+									<form name="careerForm" class="row career-form" enctype="multipart/form-data">
+
+										<div class="col-md-6">
+											<input type="text" name="first_name" class="form-control first-name" placeholder="First Name*" required>
+										</div>
+
+										<div class="col-md-6">
+											<input type="text" name="last_name" class="form-control last-name" placeholder="Last Name*" required>
+										</div>
+
+										<div class="col-md-6">
+											<input type="email" name="email" class="form-control email" placeholder="Email*" required>
+										</div>
+
+										<div class="col-md-6">
+											<input type="tel" name="phone" class="form-control phone" placeholder="Contact Number*" required>
+										</div>
+
+										<div class="col-12">
+											<input type="text" name="interest" class="form-control interest" placeholder="Position or Area of Interest*" required>
+										</div>
+
+										<div class="col-12">
+											<textarea class="form-control message" name="message" rows="5" placeholder="Tell us briefly about yourself or the position you are interested in..."></textarea>
+										</div>
+
+										<div class="col-12">
+											<label class="file-label" for="career-resume">Resume / CV*</label>
+											<input id="career-resume" type="file" name="resume" class="form-control resume" accept=".pdf,.doc,.docx" required>
+										</div>
+
+										<div class="col-12 form-btn text-right">
+											<button type="submit" class="btn btn-blue blue-hover submit">Submit Resume</button>
+										</div>
+
+										<div class="col-12">
+											<div class="career-form-message"></div>
+										</div>
+
+									</form>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</section>
+
+			</main>
+
+			<!-- FOOTER-3
+			============================================= -->
+			<footer id="footer-3" class="wide-40 footer division">
+				<div class="container">
+
+
+					<!-- FOOTER CONTENT -->
+					<div class="row">	
+
+
+						<!-- FOOTER INFO -->
+						<div class="col-md-6 col-lg-4">
+							<div class="footer-info mb-40">
+
+								<!-- Footer Logo -->
+								<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80  pixels) -->
+								<img src="images/footer-logo.png" width="180" height="40" alt="footer-logo">
+
+								<!-- Text -->	
+								<p class="p-sm mt-20">Stay connected with Marikina St. Vincent General Hospital through our social media pages for the latest hospital updates, health information, announcements, and community activities. 
+								</p>
+
+								<!-- Social Icons -->
+								<div class="footer-socials-links mt-20">
+									<ul class="foo-socials text-center clearfix">
+
+										<li><a href="https://www.facebook.com/MSVGH" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
+													
+																																				
+										
+
+									</ul>									
+								</div> 
+								
+							</div>	
+						</div>
+
+
+						<!-- FOOTER CONTACTS -->
+						<div class="col-md-6 col-lg-3 offset-lg-1">
+							<div class="footer-box mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Our Location</h5>
+
+								<!-- Address -->
+								<p>35 Bayan-Bayanan Ave.,</p> 
+								<p>Concepcion Uno, Marikina City</p>
+								
+								<!-- Email -->
+								<p class="foo-email mt-20">Email: <a href="mailto:hr.msvgh@gmail.com">hr.msvgh@gmail.com</a></p>
+
+								<!-- Phone -->
+								<p>Phone: (02)8948-0314</p>
+
+							</div>
+						</div>
+
+
+						<!-- FOOTER LINKS -->
+						<div class="col-md-6 col-lg-2">
+							<div class="footer-links mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Explore More</h5>
+
+								<!-- Footer Links -->
+								<ul class="foo-links clearfix">
+									<li><a href="history.html">Our History</a></li>
+									<li><a href="applications.html">Careers</a></li>
+									<li><a href="#">FAQs</a></li>									
+								</ul>
+
+							</div>
+						</div>
+
+
+						<!-- FOOTER LINKS -->
+						<div class="col-md-6 col-lg-2">
+							<div class="footer-links mb-40">
+												
+								<!-- Title -->
+								<h5 class="h5-xs">Discover</h5>
+
+								<!-- Footer List -->
+								<ul class="clearfix">																		
+									
+									<li><a href="#">Terms & Privacy</a></li>
+									<li><a href="#">FAQs</a></li>
+																	
+								</ul>
+
+							</div>
+						</div>	
+
+
+					</div>	  <!-- END FOOTER CONTENT -->
+
+
+					<!-- FOOTER COPYRIGHT -->
+					<div class="bottom-footer">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="footer-copyright">&copy; 2026 <span> Marikina Saint Vincent General Hospital Inc.</span>. All Rights Reserved</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>	   <!-- End container -->
+			</footer>	<!-- END FOOTER-3 -->
+
+
+
+
+		</div>	<!-- END PAGE CONTENT -->
+		
+
+
+
+		<!-- EXTERNAL SCRIPTS
+		============================================= -->	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<script src="js/jquery.appear.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>	
+		<script src="js/menu.js"></script>
+		<script src="js/sticky.js"></script>
+		<script src="js/jquery.scrollto.js"></script>
+		<script src="js/materialize.js"></script>	
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>	
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/hero-form.js"></script>
+		<script src="js/contact-form.js"></script>
+		
+		<script src="js/appointment-form.js"></script>
+		<script src="js/jquery.datetimepicker.full.js"></script>		
+		<script src="js/jquery.validate.min.js"></script>	
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/wow.js"></script>	
+	
+		<!-- Custom Script -->		
+		<script src="js/custom.js"></script>
+
+		<script> 
+			new WOW().init();
+		</script>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!-- [if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.min.js" type="text/javascript"></script>
+		<![endif] -->
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->	
+		<!--
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-XXXXX-Y', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+		-->
+		<!-- End Google Analytics -->
+
+	</body>
+
+
+
+</html>	

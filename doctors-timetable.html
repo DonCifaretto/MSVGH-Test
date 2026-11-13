@@ -1,0 +1,3129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="author" content="Jthemes"/>	
+		
+		<meta name="keywords" content="Responsive, HTML5 Template, Jthemes, One Page, Landing, Medical, Health, Healthcare, Doctor, Clinic, Care, Hospital">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+				
+  		<!-- SITE TITLE -->
+		<title>MSVGH - Doctor's Directory</title>
+							
+		<!-- FAVICON AND TOUCH ICONS  -->
+		<link rel="shortcut icon" href="images/website logo.PNG" type="image/x-icon">
+		<link rel="icon" href="images/website logo.PNG" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 	
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet"> 
+
+		<!-- BOOTSTRAP CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+				
+		<!-- FONT ICONS -->
+		<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">		
+		<link href="css/flaticon.css" rel="stylesheet">
+
+		<!-- PLUGINS STYLESHEET -->
+		<link href="css/menu.css" rel="stylesheet">	
+		<link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+		<link href="css/magnific-popup.css" rel="stylesheet">	
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/timetable.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/jquery.datetimepicker.min.css" rel="stylesheet">
+				
+		<!-- TEMPLATE CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- RESPONSIVE CSS -->
+		<link href="css/responsive.css" rel="stylesheet"> 
+	
+	
+<style>
+
+#doctor-timetable-page { background:#fff; }
+.timetable-hero {
+    background:linear-gradient(135deg,#f7fbfa 0%,#ffffff 62%,#f0f9f5 100%);
+    padding:70px 0 55px;
+    border-bottom:1px solid #e8eeee;
+}
+.timetable-kicker { color:#16a34a; font-size:13px; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; margin-bottom:12px; }
+.timetable-hero h1 { color:#123b4a; font-size:38px; font-weight:800; margin-bottom:14px; }
+.timetable-hero p { max-width:760px; margin:0 auto; color:#65747a; font-size:16px; line-height:1.8; }
+.schedule-tools { margin-top:30px; }
+.schedule-search {
+    position:relative; max-width:760px; margin:0 auto;
+}
+.schedule-search i { position:absolute; left:20px; top:50%; transform:translateY(-50%); color:#16a34a; font-size:17px; }
+.schedule-search input {
+    width:100%; height:58px; border:1px solid #dce7e4; border-radius:7px;
+    padding:0 55px 0 50px; font-size:15px; background:#fff;
+    box-shadow:0 10px 30px rgba(18,59,74,.07); outline:none;
+}
+.schedule-search input:focus { border-color:#16a34a; box-shadow:0 10px 30px rgba(22,163,74,.12); }
+.schedule-search .clear-search {
+    display:none; position:absolute; right:16px; top:50%; transform:translateY(-50%);
+    border:0; background:transparent; color:#89969a; cursor:pointer;
+}
+.schedule-controls {
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; margin-top:14px;
+}
+.schedule-filter {
+    height:44px; border:1px solid #dce7e4; border-radius:5px; padding:0 38px 0 14px;
+    color:#35515b; background:#fff; font-size:14px;
+}
+.schedule-count { font-size:13px; color:#738187; margin-left:5px; }
+.schedule-notice {
+    margin-top:28px; display:flex; align-items:flex-start; gap:12px; max-width:900px; margin-left:auto; margin-right:auto;
+    padding:16px 18px; background:#f7fbf8; border-left:4px solid #16a34a; border-radius:4px; color:#52646b; font-size:13px; line-height:1.7;
+}
+.schedule-notice i { color:#16a34a; margin-top:3px; }
+.timetable-section { padding:65px 0 80px; }
+.table-card {
+    background:#fff; border:1px solid #e4ece9; border-radius:8px;
+    box-shadow:0 12px 35px rgba(18,59,74,.07); overflow:hidden;
+}
+.table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.doctor-table { width:100%; min-width:1120px; margin:0; border-collapse:separate; border-spacing:0; }
+.doctor-table thead th {
+    background:#123b4a; color:#fff; border:0; padding:16px 14px; font-size:12px; font-weight:800;
+    text-transform:uppercase; letter-spacing:.6px; white-space:nowrap; position:sticky; top:0; z-index:3;
+}
+.doctor-table thead th:first-child { border-top-left-radius:7px; }
+.doctor-table thead th:last-child { border-top-right-radius:7px; }
+.doctor-table tbody td {
+    padding:15px 14px; border-bottom:1px solid #edf1f0; color:#4e6067; font-size:13px; line-height:1.55;
+    vertical-align:top; background:#fff;
+}
+.doctor-table tbody tr:hover td { background:#f7fcf9; }
+.doctor-table tbody tr:last-child td { border-bottom:0; }
+.specialty-label { color:#16a34a; font-size:11px; font-weight:800; letter-spacing:.3px; text-transform:uppercase; }
+.doctor-name { color:#263f49 !important; font-weight:700; min-width:210px; }
+.status-tag {
+    display:inline-block; margin:2px 0 0 5px; padding:2px 6px; border-radius:3px;
+    background:#fff0f0; color:#c94a4a; font-size:9px; font-weight:800; letter-spacing:.2px; vertical-align:middle;
+}
+.secretary-phone { color:#849197; font-size:12px; }
+.empty-state { display:none; padding:55px 20px; text-align:center; color:#718087; }
+.empty-state i { color:#16a34a; font-size:34px; margin-bottom:14px; }
+.empty-state h4 { color:#294550; font-size:20px; margin-bottom:8px; }
+.timetable-footer-note { text-align:center; color:#879399; font-size:12px; margin-top:18px; }
+@media (max-width:767px) {
+    .timetable-hero { padding:48px 0 40px; }
+    .timetable-hero h1 { font-size:29px; }
+    .timetable-hero p { font-size:14px; }
+    .timetable-section { padding:45px 0 60px; }
+    .schedule-notice { font-size:12px; }
+}
+
+
+#doctor-timetable-page ~ .bg-blue {
+    margin-top: 0;
+}
+
+
+#doctorSearch::-webkit-search-cancel-button,
+#doctorSearch::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+
+#clearDoctorSearch {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    color: #16a34a;
+    cursor: pointer;
+    z-index: 5;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+.schedule-search .clear-search i {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
+    display: inline-block;
+    margin: 0;
+    color: #16a34a;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+
+</style>
+</head>
+
+
+
+
+	<body>
+
+
+
+
+		<!-- PRELOADER SPINNER
+		============================================= -->	
+		<div id="loader-wrapper">
+			<div id="loader"><div class="loader-inner"></div></div>
+		</div>
+
+
+
+
+		<!-- PAGE CONTENT
+		============================================= -->	
+		<div id="page" class="page">
+
+
+
+
+			<!-- HEADER
+			============================================= -->
+			<header id="header" class="header">
+
+
+				<!-- MOBILE HEADER -->
+			    <div class="wsmobileheader clearfix">
+			    	<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+			    	<span class="smllogo"><img src="images/logo.png" width="180" height="40" alt="mobile-logo"/></span>
+			    	<a href="tel:123456789" class="callusbtn"><i class="fas fa-phone"></i></a>
+			 	</div>
+
+
+			 	<!-- HEADER STRIP -->
+			 	<div class="headtoppart bg-blue clearfix">
+			    	<div class="headerwp clearfix">
+
+			    		<!-- Address -->
+			     		<div class="headertopleft">			     			
+			        		<div class="address clearfix"><span><i class="fas fa-map-marker-alt"></i>35 Bayan-Bayanan Ave., Concepcion Uno, Marikina City </span> <a href="tel:123456789" class="callusbtn"><i class="fas fa-phone"></i>(02)8948-0314</a>
+			            	</div>
+			     		</div>
+
+			     		<!-- Social Links -->
+					    <div class="headertopright">
+					    	<a class="googleicon" title="Google" href="#"><i class="fab fa-google"></i> <span class="mobiletext02">Google</span></a>
+					        <a class="linkedinicon" title="Linkedin" href="#"><i class="fab fa-linkedin-in"></i> <span class="mobiletext02">Linkedin</span></a>
+					        <a class="twittericon" title="Twitter" href="#"><i class="fab fa-twitter"></i> <span class="mobiletext02">Twitter</span></a>
+					        <a class="facebookicon" title="Facebook" href="#"><i class="fab fa-facebook-f"></i> <span class="mobiletext02">Facebook</span></a>
+				      	</div>
+
+				    </div>
+			  	</div>	<!-- END HEADER STRIP -->
+
+
+			  	<!-- NAVIGATION MENU -->
+			  	<div class="wsmainfull menu clearfix">
+    				<div class="wsmainwp clearfix">
+
+    					<!-- LOGO IMAGE -->
+    					<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80 pixels) -->
+    					<div class="desktoplogo"><a href="index.html"><img src="images/logo.png"  width="180" height="40" alt="header-logo"></a></div>
+
+    					<!-- MAIN MENU -->
+      					<nav class="wsmenu clearfix">
+        					<ul class="wsmenu-list">
+
+
+        						<!-- DROPDOWN MENU -->
+					        	<li aria-haspopup="true"><a href="index.html">Home</a>
+					           		
+					          	</li>	<!-- END DROPDOWN MENU -->
+
+
+					          	  	<!-- PAGES -->
+					          	<li aria-haspopup="true"><a href="#">Explore <span class="wsarrow"></span></a>
+            						<div class="wsmegamenu clearfix">
+             							<div class="container">
+               								<div class="row">
+
+               									<!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="index.html">Home</a></li>
+								                    <li><a href="history.html">History</a></li>
+								                    <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="all-services.html">All Services</a></li>
+								                    <li><a href="all-doctors.html">All Doctors</a></li>
+								                    <li><a href="doctors-timetable.html">Doctors Timetable</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="accreditations.html">Accreditations</a></li>
+								                    <li><a href="applications.html">Applications</a></li>
+								                    <li><a href="faqs.html">FAQs</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="contact us.html">Contact Us</a></li>
+								                    <li><a href="terms.html">Terms</a></li>
+								                </ul>
+
+							                </div>  <!-- End row -->	
+							            </div>  <!-- End container -->	
+							        </div>  <!-- End wsmegamenu -->	
+							    </li>	<!-- END PAGES -->
+
+
+
+					          	
+							    
+							    <!-- SIMPLE NAVIGATION LINK -->
+							    <li class="nl-simple" aria-haspopup="true"><a href="#">Patient's Responsibilities</a></li>
+
+							    <!-- NAVIGATION MENU BUTTON -->
+							    
+
+
+        					</ul>
+        				</nav>	<!-- END MAIN MENU -->
+
+    				</div>
+    			</div>	<!-- END NAVIGATION MENU -->
+
+
+			</header>
+
+<main id="doctor-timetable-page">
+    <section class="timetable-hero">
+        <div class="container text-center">
+            <div class="timetable-kicker">
+                
+            </div>
+            <h1>
+                Doctors' Directory and Timetable
+            </h1>
+            <p>
+                Looking for a specific doctor? Search by specialty or physician’s name to find their clinic hours and availability.
+            </p>
+            <div class="schedule-tools">
+                <div class="schedule-search">
+                    <i class="fas fa-search">
+                </i>
+                <input id="doctorSearch" type="search" placeholder="Search for a doctor" aria-label="Search doctors timetable">
+                <button class="clear-search" id="clearDoctorSearch" type="button" aria-label="Clear search">
+                <i class="fas fa-times">
+            </i>
+        </button>
+    </div>
+    <div class="schedule-controls">
+        <select id="specialtyFilter" class="schedule-filter" aria-label="Filter by specialty">
+            <option value="">
+                All Specialties
+            </option>
+        </select>
+        <span id="scheduleCount" class="schedule-count">
+    </span>
+</div>
+</div>
+<div class="schedule-notice">
+    <i class="fas fa-info-circle">
+</i>
+<div>
+    <strong>
+    Updated clinic schedules as of July 30, 2026
+</strong>
+for HMO patients, location 211. Please note that schedules marked<strong>
+BY APPOINTMENT
+</strong>
+,<strong>
+ON LEAVE
+</strong>
+, or<strong>
+INDEFINITE LEAVE
+</strong>
+should be confirmed with the listed secretary before visiting.
+</div>
+</div>
+</div>
+</section>
+<section class="timetable-section">
+    <div class="container">
+        <div class="table-card">
+            <div class="table-scroll">
+                <table class="doctor-table" id="doctorTable">
+                    <thead>
+                        <tr>
+                            <th>
+                                Specialization
+                            </th>
+                            <th>
+                                Physician
+                            </th>
+                            <th>
+                                Room
+                            </th>
+                            <th>
+                                Schedule (Day)
+                            </th>
+                            <th>
+                                Time
+                            </th>
+                            <th>
+                                Secretary
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-search="DERMA COMUELO, Rosalinda 102 MWF 1pm-3pm Ms. Sabel 0912 297 1589 / (02) 8728-1028 NO HMO">
+                            <td>
+                                <span class="specialty-label">
+                                DERMA
+                            </span>
+                        </td>
+                        <td class="doctor-name">
+                            COMUELO, Rosalinda<span class="status-tag">
+                            NO HMO
+                        </span>
+                    </td>
+                    <td>
+                        102
+                    </td>
+                    <td>
+                        MWF
+                    </td>
+                    <td>
+                        1pm-3pm
+                    </td>
+                    <td>
+                        Ms. Sabel<br>
+                        <span class="secretary-phone">
+                        0912 297 1589 / (02) 8728-1028
+                    </span>
+                </td>
+            </tr>
+            <tr data-search="DERMA BAYSA, Josephine 5 TELECONSULT ONLY — Ms. Joyce 0947 721 0093 ">
+                <td>
+                    <span class="specialty-label">
+                    DERMA
+                </span>
+            </td>
+            <td class="doctor-name">
+                BAYSA, Josephine
+            </td>
+            <td>
+                5
+            </td>
+            <td>
+                TELECONSULT ONLY
+            </td>
+            <td>
+                —
+            </td>
+            <td>
+                Ms. Joyce<br>
+                <span class="secretary-phone">
+                0947 721 0093
+            </span>
+        </td>
+    </tr>
+    <tr data-search="DERMA TAIRA, Mirla 203 TUES, THURS &amp; SAT 10am-12nn Ms. Marie 0933 866 2375 ">
+        <td>
+            <span class="specialty-label">
+            DERMA
+        </span>
+    </td>
+    <td class="doctor-name">
+        TAIRA, Mirla
+    </td>
+    <td>
+        203
+    </td>
+    <td>
+        TUES, THURS &amp; SAT
+    </td>
+    <td>
+        10am-12nn
+    </td>
+    <td>
+        Ms. Marie<br>
+        <span class="secretary-phone">
+        0933 866 2375
+    </span>
+</td>
+</tr>
+<tr data-search="DERMA JIMENEZ, Nerissa 205 MWF 1pm-3pm Ms. Jen 0949 997 7900 NO HMO">
+    <td>
+        <span class="specialty-label">
+        DERMA
+    </span>
+</td>
+<td class="doctor-name">
+    JIMENEZ, Nerissa<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    205
+</td>
+<td>
+    MWF
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Jen<br>
+    <span class="secretary-phone">
+    0949 997 7900
+</span>
+</td>
+</tr>
+<tr data-search="EENT JIMENEZ, Louise 205 MWF 1pm-3pm Ms. Jen 0949 997 7900 NO HMO">
+    <td>
+        <span class="specialty-label">
+        EENT
+    </span>
+</td>
+<td class="doctor-name">
+    JIMENEZ, Louise<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    205
+</td>
+<td>
+    MWF
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Jen<br>
+    <span class="secretary-phone">
+    0949 997 7900
+</span>
+</td>
+</tr>
+<tr data-search="ENT-HNS CARLOS, Avian Loren 5 MON, TUE, FRI &amp; SAT 3pm-5pm Ms. Joyce 0947 721 0093 ">
+    <td>
+        <span class="specialty-label">
+        ENT-HNS
+    </span>
+</td>
+<td class="doctor-name">
+    CARLOS, Avian Loren
+</td>
+<td>
+    5
+</td>
+<td>
+    MON, TUE, FRI &amp; SAT
+</td>
+<td>
+    3pm-5pm
+</td>
+<td>
+    Ms. Joyce<br>
+    <span class="secretary-phone">
+    0947 721 0093
+</span>
+</td>
+</tr>
+<tr data-search="ENT-HNS SY, Marc Christian 7 MON &amp; FRIDAY 8am-10am Ms. Rica 0946 227 4586 ">
+    <td>
+        <span class="specialty-label">
+        ENT-HNS
+    </span>
+</td>
+<td class="doctor-name">
+    SY, Marc Christian
+</td>
+<td>
+    7
+</td>
+<td>
+    MON &amp; FRIDAY
+</td>
+<td>
+    8am-10am
+</td>
+<td>
+    Ms. Rica<br>
+    <span class="secretary-phone">
+    0946 227 4586
+</span>
+</td>
+</tr>
+<tr data-search="ENT-HNS CHAVEZ, Cesar Joaquin Jr. 203 MWF 10am-12nn Ms. Ter 0945 647 4158 ">
+    <td>
+        <span class="specialty-label">
+        ENT-HNS
+    </span>
+</td>
+<td class="doctor-name">
+    CHAVEZ, Cesar Joaquin Jr.
+</td>
+<td>
+    203
+</td>
+<td>
+    MWF
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Ter<br>
+    <span class="secretary-phone">
+    0945 647 4158
+</span>
+</td>
+</tr>
+<tr data-search="GENERAL SURGEON CULANGEN, Erwin Carlo 4 MON, TUES, THURS &amp; SAT 1pm-3pm Ms. Ruth 0915 718 0631 NO HMO">
+    <td>
+        <span class="specialty-label">
+        GENERAL SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    CULANGEN, Erwin Carlo<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    4
+</td>
+<td>
+    MON, TUES, THURS &amp; SAT
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Ruth<br>
+    <span class="secretary-phone">
+    0915 718 0631
+</span>
+</td>
+</tr>
+<tr data-search="GENERAL SURGEON BUENO, Emmanuel 1 BY APPOINTMENT — DIRECTORS or ACCOUNTING OFFICE — ">
+    <td>
+        <span class="specialty-label">
+        GENERAL SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    BUENO, Emmanuel
+</td>
+<td>
+    1
+</td>
+<td>
+    BY APPOINTMENT
+</td>
+<td>
+    —
+</td>
+<td>
+    DIRECTORS or ACCOUNTING OFFICE<br>
+    <span class="secretary-phone">
+    —
+</span>
+</td>
+</tr>
+<tr data-search="GENERAL SURGEON BAQUIR, Allan Troy 208 BY APPOINTMENT — Ms. Abby 0938 408 3603 ">
+    <td>
+        <span class="specialty-label">
+        GENERAL SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    BAQUIR, Allan Troy
+</td>
+<td>
+    208
+</td>
+<td>
+    BY APPOINTMENT
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Abby<br>
+    <span class="secretary-phone">
+    0938 408 3603
+</span>
+</td>
+</tr>
+<tr data-search="GENERAL SURGEON SINON, Xenia Caressa 208 MON &amp; FRIDAY 10am-12nn Ms. Abby 0938 408 3603 ">
+    <td>
+        <span class="specialty-label">
+        GENERAL SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    SINON, Xenia Caressa
+</td>
+<td>
+    208
+</td>
+<td>
+    MON &amp; FRIDAY
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Abby<br>
+    <span class="secretary-phone">
+    0938 408 3603
+</span>
+</td>
+</tr>
+<tr data-search="GENERAL SURGEON AGBAYANI, Andrea Camille 102 ON LEAVE — Ms. Sabel 0912 297 1589 / (02) 8728-1028 NO HMO">
+    <td>
+        <span class="specialty-label">
+        GENERAL SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    AGBAYANI, Andrea Camille<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    102
+</td>
+<td>
+    ON LEAVE
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="GENERAL SURGEON RIVERA, Jerome 202 TUE &amp; THURS 1pm-3pm Ms. Jobelle 0993 367 3679 ">
+    <td>
+        <span class="specialty-label">
+        GENERAL SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    RIVERA, Jerome
+</td>
+<td>
+    202
+</td>
+<td>
+    TUE &amp; THURS
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Jobelle<br>
+    <span class="secretary-phone">
+    0993 367 3679
+</span>
+</td>
+</tr>
+<tr data-search="GENERAL SURGEON CONCEPCION, Jonathan Don 201 THURS (1pm-3pm) FRI (ON CALL) — Ms. Marie 0933 866 2375 NO HMO">
+    <td>
+        <span class="specialty-label">
+        GENERAL SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    CONCEPCION, Jonathan Don<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    201
+</td>
+<td>
+    THURS (1pm-3pm) FRI (ON CALL)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Marie<br>
+    <span class="secretary-phone">
+    0933 866 2375
+</span>
+</td>
+</tr>
+<tr data-search="PLASTIC SURGEON BELLO, Lawrence 208 BY APPOINTMENT — — — NO HMO">
+    <td>
+        <span class="specialty-label">
+        PLASTIC SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    BELLO, Lawrence<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    208
+</td>
+<td>
+    BY APPOINTMENT
+</td>
+<td>
+    —
+</td>
+<td>
+    —<br>
+    <span class="secretary-phone">
+    —
+</span>
+</td>
+</tr>
+<tr data-search="PLASTIC SURGEON MERCADO, Edmundo HMO BY APPOINTMENT — HMO Office (02) 8570 5758 ">
+    <td>
+        <span class="specialty-label">
+        PLASTIC SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    MERCADO, Edmundo
+</td>
+<td>
+    HMO
+</td>
+<td>
+    BY APPOINTMENT
+</td>
+<td>
+    —
+</td>
+<td>
+    HMO Office<br>
+    <span class="secretary-phone">
+    (02) 8570 5758
+</span>
+</td>
+</tr>
+<tr data-search="TCVS PEREZ, Joanne 208 THURS (8am-10am) SAT 10am-12nn Ms. Abby 0938 408 3603 ">
+    <td>
+        <span class="specialty-label">
+        TCVS
+    </span>
+</td>
+<td class="doctor-name">
+    PEREZ, Joanne
+</td>
+<td>
+    208
+</td>
+<td>
+    THURS (8am-10am) SAT
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Abby<br>
+    <span class="secretary-phone">
+    0938 408 3603
+</span>
+</td>
+</tr>
+<tr data-search="IM BOSETA, Marites 3 MON, WED, FRI 4pm-7pm Ms. Mimi 0932 390 8357 ">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    BOSETA, Marites
+</td>
+<td>
+    3
+</td>
+<td>
+    MON, WED, FRI
+</td>
+<td>
+    4pm-7pm
+</td>
+<td>
+    Ms. Mimi<br>
+    <span class="secretary-phone">
+    0932 390 8357
+</span>
+</td>
+</tr>
+<tr data-search="IM SANTOS, Dindo Ferdinand 7 MWF 4pm-5pm Ms. Rica 0946 227 4586 ">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    SANTOS, Dindo Ferdinand
+</td>
+<td>
+    7
+</td>
+<td>
+    MWF
+</td>
+<td>
+    4pm-5pm
+</td>
+<td>
+    Ms. Rica<br>
+    <span class="secretary-phone">
+    0946 227 4586
+</span>
+</td>
+</tr>
+<tr data-search="IM SIOBAL, Marie Bianca 201 MON (2pm-4pm) THURS (1pm-3pm) FRI (8am-10am) Ms. Marie 0933 866 2375 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    SIOBAL, Marie Bianca<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    201
+</td>
+<td>
+    MON (2pm-4pm) THURS (1pm-3pm)
+</td>
+<td>
+    FRI (8am-10am)
+</td>
+<td>
+    Ms. Marie<br>
+    <span class="secretary-phone">
+    0933 866 2375
+</span>
+</td>
+</tr>
+<tr data-search="IM GONZALES, Harlan Shane 7 MON &amp; THURS 10am-12nn Ms. Rica 0946 227 4586 ">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    GONZALES, Harlan Shane
+</td>
+<td>
+    7
+</td>
+<td>
+    MON &amp; THURS
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Rica<br>
+    <span class="secretary-phone">
+    0946 227 4586
+</span>
+</td>
+</tr>
+<tr data-search="IM CRUZ, Larissa Kyla 204 THURS 9am-11am Ms. Raquel 0942 357 9607 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    CRUZ, Larissa Kyla<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    204
+</td>
+<td>
+    THURS
+</td>
+<td>
+    9am-11am
+</td>
+<td>
+    Ms. Raquel<br>
+    <span class="secretary-phone">
+    0942 357 9607
+</span>
+</td>
+</tr>
+<tr data-search="IM-Adult Diseases CAPISTRANO, John Paul 201 TUES, WED &amp; SAT 1pm-3pm Ms. Marie 0933 866 2375 ">
+    <td>
+        <span class="specialty-label">
+        IM-Adult Diseases
+    </span>
+</td>
+<td class="doctor-name">
+    CAPISTRANO, John Paul
+</td>
+<td>
+    201
+</td>
+<td>
+    TUES, WED &amp; SAT
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Marie<br>
+    <span class="secretary-phone">
+    0933 866 2375
+</span>
+</td>
+</tr>
+<tr data-search="IM MENIA, Philbert John 206 ON LEAVE — Ms. Vida 0977 703 4644 ">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    MENIA, Philbert John
+</td>
+<td>
+    206
+</td>
+<td>
+    ON LEAVE
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Vida<br>
+    <span class="secretary-phone">
+    0977 703 4644
+</span>
+</td>
+</tr>
+<tr data-search="IM UBAY, Cherry Ann 7 THURS (3pm-5pm) SAT (11am-1pm) Ms. Rica 0946 227 4586 ">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    UBAY, Cherry Ann
+</td>
+<td>
+    7
+</td>
+<td>
+    THURS (3pm-5pm)
+</td>
+<td>
+    SAT (11am-1pm)
+</td>
+<td>
+    Ms. Rica<br>
+    <span class="secretary-phone">
+    0946 227 4586
+</span>
+</td>
+</tr>
+<tr data-search="IM TAWINGAN, Danielle James 5 TUES &amp; WED (1pm-3pm) THURS (1pm-5pm) Ms. Joyce 0947 721 0093 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    TAWINGAN, Danielle James<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    5
+</td>
+<td>
+    TUES &amp; WED (1pm-3pm)
+</td>
+<td>
+    THURS (1pm-5pm)
+</td>
+<td>
+    Ms. Joyce<br>
+    <span class="secretary-phone">
+    0947 721 0093
+</span>
+</td>
+</tr>
+<tr data-search="IM CAPINPIN, Melissa Camille 203 TUES, WED, THUR 12nn-2pm Ms. Ter 0945 647 4158 ">
+    <td>
+        <span class="specialty-label">
+        IM
+    </span>
+</td>
+<td class="doctor-name">
+    CAPINPIN, Melissa Camille
+</td>
+<td>
+    203
+</td>
+<td>
+    TUES, WED, THUR
+</td>
+<td>
+    12nn-2pm
+</td>
+<td>
+    Ms. Ter<br>
+    <span class="secretary-phone">
+    0945 647 4158
+</span>
+</td>
+</tr>
+<tr data-search="IM-CARDIO TAMARGO, Ailen 206 TUES &amp; THURS 1pm-3pm Ms. Vida 0977 703 4644 ">
+    <td>
+        <span class="specialty-label">
+        IM-CARDIO
+    </span>
+</td>
+<td class="doctor-name">
+    TAMARGO, Ailen
+</td>
+<td>
+    206
+</td>
+<td>
+    TUES &amp; THURS
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Vida<br>
+    <span class="secretary-phone">
+    0977 703 4644
+</span>
+</td>
+</tr>
+<tr data-search="IM-CARDIO TANQUE, Maribel 202 BY APPOINTMENT 1pm-3pm Ms. Jobelle 0993 367 3679 HOLD HMO">
+    <td>
+        <span class="specialty-label">
+        IM-CARDIO
+    </span>
+</td>
+<td class="doctor-name">
+    TANQUE, Maribel<span class="status-tag">
+    HOLD HMO
+</span>
+</td>
+<td>
+    202
+</td>
+<td>
+    BY APPOINTMENT
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Jobelle<br>
+    <span class="secretary-phone">
+    0993 367 3679
+</span>
+</td>
+</tr>
+<tr data-search="IM-CARDIO TRONCALES, Aura 202 BY APPOINTMENT 10am-12nn Ms. Jobelle 0993 367 3679 HOLD HMO">
+    <td>
+        <span class="specialty-label">
+        IM-CARDIO
+    </span>
+</td>
+<td class="doctor-name">
+    TRONCALES, Aura<span class="status-tag">
+    HOLD HMO
+</span>
+</td>
+<td>
+    202
+</td>
+<td>
+    BY APPOINTMENT
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Jobelle<br>
+    <span class="secretary-phone">
+    0993 367 3679
+</span>
+</td>
+</tr>
+<tr data-search="IM-CARDIO GO, John Henderson 210 MWF 8am-9:30am Ms. Sally 0999 699 7023 HOLD HMO">
+    <td>
+        <span class="specialty-label">
+        IM-CARDIO
+    </span>
+</td>
+<td class="doctor-name">
+    GO, John Henderson<span class="status-tag">
+    HOLD HMO
+</span>
+</td>
+<td>
+    210
+</td>
+<td>
+    MWF
+</td>
+<td>
+    8am-9:30am
+</td>
+<td>
+    Ms. Sally<br>
+    <span class="secretary-phone">
+    0999 699 7023
+</span>
+</td>
+</tr>
+<tr data-search="IM-CARDIO GARCIA, Ma. Victoria 210 MWF 5pm-7pm Ms. Sally 0999 699 7023 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-CARDIO
+    </span>
+</td>
+<td class="doctor-name">
+    GARCIA, Ma. Victoria<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    210
+</td>
+<td>
+    MWF
+</td>
+<td>
+    5pm-7pm
+</td>
+<td>
+    Ms. Sally<br>
+    <span class="secretary-phone">
+    0999 699 7023
+</span>
+</td>
+</tr>
+<tr data-search="IM-CARDIO BAYSA, Andres Jr. 5 MWF 5pm-7pm Ms. Joyce 0947 721 0093 ">
+    <td>
+        <span class="specialty-label">
+        IM-CARDIO
+    </span>
+</td>
+<td class="doctor-name">
+    BAYSA, Andres Jr.
+</td>
+<td>
+    5
+</td>
+<td>
+    MWF
+</td>
+<td>
+    5pm-7pm
+</td>
+<td>
+    Ms. Joyce<br>
+    <span class="secretary-phone">
+    0947 721 0093
+</span>
+</td>
+</tr>
+<tr data-search="IM-CARDIO MANZANO, Russel Jun 208 MON &amp; FRIDAY (1pm-3pm) WED (9am-11am) Ms. Abby 0938 408 3603 ">
+    <td>
+        <span class="specialty-label">
+        IM-CARDIO
+    </span>
+</td>
+<td class="doctor-name">
+    MANZANO, Russel Jun
+</td>
+<td>
+    208
+</td>
+<td>
+    MON &amp; FRIDAY (1pm-3pm)
+</td>
+<td>
+    WED (9am-11am)
+</td>
+<td>
+    Ms. Abby<br>
+    <span class="secretary-phone">
+    0938 408 3603
+</span>
+</td>
+</tr>
+<tr data-search="IM-DIABETOLOGIST STA. ANA, Enrico 206 MON-FRI 9:00am-10:30am Ms. Lhen 0908 114 9713 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-DIABETOLOGIST
+    </span>
+</td>
+<td class="doctor-name">
+    STA. ANA, Enrico<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    206
+</td>
+<td>
+    MON-FRI
+</td>
+<td>
+    9:00am-10:30am
+</td>
+<td>
+    Ms. Lhen<br>
+    <span class="secretary-phone">
+    0908 114 9713
+</span>
+</td>
+</tr>
+<tr data-search="FAMILY MED-GERIA ORO-JOSEF, Cheridine 207 MON &amp; SAT (BY APPT) 2pm-4pm Ms. Laleyn 0977 753 3724 ">
+    <td>
+        <span class="specialty-label">
+        FAMILY MED-GERIA
+    </span>
+</td>
+<td class="doctor-name">
+    ORO-JOSEF, Cheridine
+</td>
+<td>
+    207
+</td>
+<td>
+    MON &amp; SAT (BY APPT)
+</td>
+<td>
+    2pm-4pm
+</td>
+<td>
+    Ms. Laleyn<br>
+    <span class="secretary-phone">
+    0977 753 3724
+</span>
+</td>
+</tr>
+<tr data-search="IM-ENDO CO, Patrick James 205 TUES &amp; THURS 3pm-5pm Ms. Jen 0949 997 7900 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-ENDO
+    </span>
+</td>
+<td class="doctor-name">
+    CO, Patrick James<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    205
+</td>
+<td>
+    TUES &amp; THURS
+</td>
+<td>
+    3pm-5pm
+</td>
+<td>
+    Ms. Jen<br>
+    <span class="secretary-phone">
+    0949 997 7900
+</span>
+</td>
+</tr>
+<tr data-search="IM-ENDO SANTOS, Vincent 4 TUES, THURS, SAT BY APPT 9am-12nn Ms. Ruth 0915 718 0631 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-ENDO
+    </span>
+</td>
+<td class="doctor-name">
+    SANTOS, Vincent<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    4
+</td>
+<td>
+    TUES, THURS, SAT BY APPT
+</td>
+<td>
+    9am-12nn
+</td>
+<td>
+    Ms. Ruth<br>
+    <span class="secretary-phone">
+    0915 718 0631
+</span>
+</td>
+</tr>
+<tr data-search="IM-GASTRO MALAYA, Benjamin 203 WEDNESDAY, SAT 5pm-6pm Ms. Ter 0945 647 4158 ">
+    <td>
+        <span class="specialty-label">
+        IM-GASTRO
+    </span>
+</td>
+<td class="doctor-name">
+    MALAYA, Benjamin
+</td>
+<td>
+    203
+</td>
+<td>
+    WEDNESDAY, SAT
+</td>
+<td>
+    5pm-6pm
+</td>
+<td>
+    Ms. Ter<br>
+    <span class="secretary-phone">
+    0945 647 4158
+</span>
+</td>
+</tr>
+<tr data-search="IM-GASTRO ESGUERRA, Denise Francesca 205 WEDNESDAY &amp; FRIDAY 10am-12nn Ms. Jen 0949 997 7900 ">
+    <td>
+        <span class="specialty-label">
+        IM-GASTRO
+    </span>
+</td>
+<td class="doctor-name">
+    ESGUERRA, Denise Francesca
+</td>
+<td>
+    205
+</td>
+<td>
+    WEDNESDAY &amp; FRIDAY
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Jen<br>
+    <span class="secretary-phone">
+    0949 997 7900
+</span>
+</td>
+</tr>
+<tr data-search="IM-GASTRO LEE, Ronell 102 TUESDAY &amp; FRIDAY 9am-11am Ms. Sabel 0912 297 1589 / (02) 8728-1028 ">
+    <td>
+        <span class="specialty-label">
+        IM-GASTRO
+    </span>
+</td>
+<td class="doctor-name">
+    LEE, Ronell
+</td>
+<td>
+    102
+</td>
+<td>
+    TUESDAY &amp; FRIDAY
+</td>
+<td>
+    9am-11am
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="IM-GASTRO BUENO, Maria Lourdes 1 MWF 6pm-7pm Ms. Sabel 0912 297 1589 / (02) 8728-1028 ">
+    <td>
+        <span class="specialty-label">
+        IM-GASTRO
+    </span>
+</td>
+<td class="doctor-name">
+    BUENO, Maria Lourdes
+</td>
+<td>
+    1
+</td>
+<td>
+    MWF
+</td>
+<td>
+    6pm-7pm
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="IM-HEMATOLOGIST VALLENTE, Jeremiah 102 TUES &amp; SAT 5pm-7pm Ms. Sabel 0912 297 1589 / (02) 8728-1028 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-HEMATOLOGIST
+    </span>
+</td>
+<td class="doctor-name">
+    VALLENTE, Jeremiah<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    102
+</td>
+<td>
+    TUES &amp; SAT
+</td>
+<td>
+    5pm-7pm
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="IM-NEPHRO CHAN, Rufino 3 TUES &amp; THURS BY APPT 9am-12nn Ms. Mimi 0932 390 8357 HOLD HMOs">
+    <td>
+        <span class="specialty-label">
+        IM-NEPHRO
+    </span>
+</td>
+<td class="doctor-name">
+    CHAN, Rufino<span class="status-tag">
+    HOLD HMOs
+</span>
+</td>
+<td>
+    3
+</td>
+<td>
+    TUES &amp; THURS BY APPT
+</td>
+<td>
+    9am-12nn
+</td>
+<td>
+    Ms. Mimi<br>
+    <span class="secretary-phone">
+    0932 390 8357
+</span>
+</td>
+</tr>
+<tr data-search="IM-NEPHRO VICTORIANO, Victor Alexander 208 WED &amp; FRIDAY 10am-12nn Ms. Abby 0938 408 3603 ">
+    <td>
+        <span class="specialty-label">
+        IM-NEPHRO
+    </span>
+</td>
+<td class="doctor-name">
+    VICTORIANO, Victor Alexander
+</td>
+<td>
+    208
+</td>
+<td>
+    WED &amp; FRIDAY
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Abby<br>
+    <span class="secretary-phone">
+    0938 408 3603
+</span>
+</td>
+</tr>
+<tr data-search="IM-NEPHRO SANTIAGO, Eric Hughes 206 MWF 3pm-4:30pm Ms. Vida 0977 703 4644 ">
+    <td>
+        <span class="specialty-label">
+        IM-NEPHRO
+    </span>
+</td>
+<td class="doctor-name">
+    SANTIAGO, Eric Hughes
+</td>
+<td>
+    206
+</td>
+<td>
+    MWF
+</td>
+<td>
+    3pm-4:30pm
+</td>
+<td>
+    Ms. Vida<br>
+    <span class="secretary-phone">
+    0977 703 4644
+</span>
+</td>
+</tr>
+<tr data-search="IM-NEPHRO CRUZ, Agnes 210 SAT (10am-12nn) BY APPOINTMENT — Ms. Sally 0999 699 7023 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-NEPHRO
+    </span>
+</td>
+<td class="doctor-name">
+    CRUZ, Agnes<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    210
+</td>
+<td>
+    SAT (10am-12nn) BY APPOINTMENT
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Sally<br>
+    <span class="secretary-phone">
+    0999 699 7023
+</span>
+</td>
+</tr>
+<tr data-search="IM-PULMO HERNANDEZ, Benjamin Jr 4 MWF 1pm-3pm Ms. Ruth 0915 718 0631 HOLD HMO">
+    <td>
+        <span class="specialty-label">
+        IM-PULMO
+    </span>
+</td>
+<td class="doctor-name">
+    HERNANDEZ, Benjamin Jr<span class="status-tag">
+    HOLD HMO
+</span>
+</td>
+<td>
+    4
+</td>
+<td>
+    MWF
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Ruth<br>
+    <span class="secretary-phone">
+    0915 718 0631
+</span>
+</td>
+</tr>
+<tr data-search="IM-PULMO NIDUAZA, Victorino 102 TUES, THURS &amp; SAT 1:30pm-4:30pm Ms. Sabel 0912 297 1589 / (02) 8728-1028 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-PULMO
+    </span>
+</td>
+<td class="doctor-name">
+    NIDUAZA, Victorino<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    102
+</td>
+<td>
+    TUES, THURS &amp; SAT
+</td>
+<td>
+    1:30pm-4:30pm
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="IM-PULMO MAPANAO, Daisy 208 TUESDAY 1pm-3pm Ms. Abby 0938 408 3603 ">
+    <td>
+        <span class="specialty-label">
+        IM-PULMO
+    </span>
+</td>
+<td class="doctor-name">
+    MAPANAO, Daisy
+</td>
+<td>
+    208
+</td>
+<td>
+    TUESDAY
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Abby<br>
+    <span class="secretary-phone">
+    0938 408 3603
+</span>
+</td>
+</tr>
+<tr data-search="IM-PULMO MAGUSLOG, Svethlana 7 TUES &amp; THURS 9am-10am Ms. Rica 0946 227 4586 ">
+    <td>
+        <span class="specialty-label">
+        IM-PULMO
+    </span>
+</td>
+<td class="doctor-name">
+    MAGUSLOG, Svethlana
+</td>
+<td>
+    7
+</td>
+<td>
+    TUES &amp; THURS
+</td>
+<td>
+    9am-10am
+</td>
+<td>
+    Ms. Rica<br>
+    <span class="secretary-phone">
+    0946 227 4586
+</span>
+</td>
+</tr>
+<tr data-search="IM-NEURO CAMARA-CHUA, Pia 204 MON, TUE, WED (BY APPOINTMENT) 10am-12nn Ms. Raquel 0942 357 9607 NO HMO">
+    <td>
+        <span class="specialty-label">
+        IM-NEURO
+    </span>
+</td>
+<td class="doctor-name">
+    CAMARA-CHUA, Pia<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    204
+</td>
+<td>
+    MON, TUE, WED (BY APPOINTMENT)
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Raquel<br>
+    <span class="secretary-phone">
+    0942 357 9607
+</span>
+</td>
+</tr>
+<tr data-search="NEURO AJON, Alyssa Roseni 5 MON, SAT (2pm-4pm) WED (3pm-5pm) FRI (10am-12nn) — Ms. Joyce 0947 721 0093 NO HMO">
+    <td>
+        <span class="specialty-label">
+        NEURO
+    </span>
+</td>
+<td class="doctor-name">
+    AJON, Alyssa Roseni<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    5
+</td>
+<td>
+    MON, SAT (2pm-4pm) WED (3pm-5pm) FRI (10am-12nn)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Joyce<br>
+    <span class="secretary-phone">
+    0947 721 0093
+</span>
+</td>
+</tr>
+<tr data-search="NEURO EPILEPTOLOGY FERNANDEZ, Mark 201 MON (10:30am-12nn) WED (3pm-5pm) — Ms. Marie 0933 866 2375 NO HMO">
+    <td>
+        <span class="specialty-label">
+        NEURO EPILEPTOLOGY
+    </span>
+</td>
+<td class="doctor-name">
+    FERNANDEZ, Mark<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    201
+</td>
+<td>
+    MON (10:30am-12nn) WED (3pm-5pm)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Marie<br>
+    <span class="secretary-phone">
+    0933 866 2375
+</span>
+</td>
+</tr>
+<tr data-search="NEURO CRUZ, John Paul 204 ON LEAVE — Ms. Raquel 0942 357 9607 NO HMO">
+    <td>
+        <span class="specialty-label">
+        NEURO
+    </span>
+</td>
+<td class="doctor-name">
+    CRUZ, John Paul<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    204
+</td>
+<td>
+    ON LEAVE
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Raquel<br>
+    <span class="secretary-phone">
+    0942 357 9607
+</span>
+</td>
+</tr>
+<tr data-search="NEURO PSYCH BANZON, Jacqueline 205 TUES, TH, SAT BY APPT 10am-12nn Ms. Jen 0949 997 7900 NO HMO">
+    <td>
+        <span class="specialty-label">
+        NEURO PSYCH
+    </span>
+</td>
+<td class="doctor-name">
+    BANZON, Jacqueline<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    205
+</td>
+<td>
+    TUES, TH, SAT BY APPT
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Jen<br>
+    <span class="secretary-phone">
+    0949 997 7900
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN STA. ANA, Marizel 205 INDEFINITE LEAVE — Ms. Jen 0949 997 7900 NO HMO">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    STA. ANA, Marizel<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    205
+</td>
+<td>
+    INDEFINITE LEAVE
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Jen<br>
+    <span class="secretary-phone">
+    0949 997 7900
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN MARIANO, Diosdado 3 MWF 10am-12nn Ms. Mimi 0932 390 8357 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    MARIANO, Diosdado
+</td>
+<td>
+    3
+</td>
+<td>
+    MWF
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Mimi<br>
+    <span class="secretary-phone">
+    0932 390 8357
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN BUADA, Katrina Sandra 102 SATURDAY (ON CALL) 8am-10am Ms. Sabel 0912 297 1589 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    BUADA, Katrina Sandra
+</td>
+<td>
+    102
+</td>
+<td>
+    SATURDAY (ON CALL)
+</td>
+<td>
+    8am-10am
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN CABALLA, Cecile 201 FRI &amp; SAT BY APPT 1pm-3pm Ms. Marie 0933 866 2375 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    CABALLA, Cecile
+</td>
+<td>
+    201
+</td>
+<td>
+    FRI &amp; SAT BY APPT
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Marie<br>
+    <span class="secretary-phone">
+    0933 866 2375
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN SUAREZ, Maricarl 3 TUES &amp; THURS (1pm-4pm) SAT (4pm-7pm) — Ms. Mimi 0932 390 8357 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    SUAREZ, Maricarl
+</td>
+<td>
+    3
+</td>
+<td>
+    TUES &amp; THURS (1pm-4pm) SAT (4pm-7pm)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Mimi<br>
+    <span class="secretary-phone">
+    0932 390 8357
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN ACOSTA, Maiah 3 ON LEAVE — Ms. Mimi 0932 390 8357 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    ACOSTA, Maiah
+</td>
+<td>
+    3
+</td>
+<td>
+    ON LEAVE
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Mimi<br>
+    <span class="secretary-phone">
+    0932 390 8357
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN FONTANILLA, Khristie Lynn 208 WED (12nn) BY APPT FRI (10am) APPT — Ms. Abby 0938 408 3603 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    FONTANILLA, Khristie Lynn
+</td>
+<td>
+    208
+</td>
+<td>
+    WED (12nn) BY APPT FRI (10am) APPT
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Abby<br>
+    <span class="secretary-phone">
+    0938 408 3603
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN LAXAMANA, Kristine 204 THURSDAYS 10am-12nn Ms. Raquel 0942 357 9607 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    LAXAMANA, Kristine
+</td>
+<td>
+    204
+</td>
+<td>
+    THURSDAYS
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Raquel<br>
+    <span class="secretary-phone">
+    0942 357 9607
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN CRIMEN, Ana Victoria 210 THURS &amp; FRI 10am-12nn Ms. Sally 0999 699 7023 NO HMO">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    CRIMEN, Ana Victoria<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    210
+</td>
+<td>
+    THURS &amp; FRI
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Sally<br>
+    <span class="secretary-phone">
+    0999 699 7023
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN-SONO CULANGEN, Elijinese 4 MWF (12nn-1pm) (BY APPT) — Ms. Ruth 0915 718 0631 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN-SONO
+    </span>
+</td>
+<td class="doctor-name">
+    CULANGEN, Elijinese
+</td>
+<td>
+    4
+</td>
+<td>
+    MWF (12nn-1pm) (BY APPT)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Ruth<br>
+    <span class="secretary-phone">
+    0915 718 0631
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN ALLAN-TAWINGAN, Kristen Aljulin 5 MON (10-12nn) TUES &amp; THURS (12-2pm) FRI (1-3pm) — Ms. Joyce 0947 721 0093 NO HMO">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    ALLAN-TAWINGAN, Kristen Aljulin<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    5
+</td>
+<td>
+    MON (10-12nn) TUES &amp; THURS (12-2pm) FRI (1-3pm)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Joyce<br>
+    <span class="secretary-phone">
+    0947 721 0093
+</span>
+</td>
+</tr>
+<tr data-search="OB GYN SANTIAGO, Maria Juvy 207 MON-SAT 11am-1pm Ms. Laleyn 0977 753 3724 ">
+    <td>
+        <span class="specialty-label">
+        OB GYN
+    </span>
+</td>
+<td class="doctor-name">
+    SANTIAGO, Maria Juvy
+</td>
+<td>
+    207
+</td>
+<td>
+    MON-SAT
+</td>
+<td>
+    11am-1pm
+</td>
+<td>
+    Ms. Laleyn<br>
+    <span class="secretary-phone">
+    0977 753 3724
+</span>
+</td>
+</tr>
+<tr data-search="OPHTHA-SURGEON Efren Laxamana / Francis Laxamana 204 TUES &amp; THURS BY APPT 1pm-3pm Ms. Raquel 0942 357 9607 ">
+    <td>
+        <span class="specialty-label">
+        OPHTHA-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    Efren Laxamana / Francis Laxamana
+</td>
+<td>
+    204
+</td>
+<td>
+    TUES &amp; THURS BY APPT
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Raquel<br>
+    <span class="secretary-phone">
+    0942 357 9607
+</span>
+</td>
+</tr>
+<tr data-search="ORTHO-SURGEON TICMAN, Misael Jonathan 206 INDEFINITE LEAVE — Ms. Vida 0977 703 4644 ">
+    <td>
+        <span class="specialty-label">
+        ORTHO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    TICMAN, Misael Jonathan
+</td>
+<td>
+    206
+</td>
+<td>
+    INDEFINITE LEAVE
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Vida<br>
+    <span class="secretary-phone">
+    0977 703 4644
+</span>
+</td>
+</tr>
+<tr data-search="ORTHO-SURGEON REYES, Reynald Angelo Rehab TUES &amp; THURS (1pm-3pm) — Ms. Jo (02) 8531-5080 / 0968 865 7888 ">
+    <td>
+        <span class="specialty-label">
+        ORTHO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    REYES, Reynald Angelo
+</td>
+<td>
+    Rehab
+</td>
+<td>
+    TUES &amp; THURS (1pm-3pm)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Jo<br>
+    <span class="secretary-phone">
+    (02) 8531-5080 / 0968 865 7888
+</span>
+</td>
+</tr>
+<tr data-search="ORTHO-SURGEON BROWN, Jocelle Joanne 206 INDEFINITE LEAVE — Ms. Vida 0977 703 4644 ">
+    <td>
+        <span class="specialty-label">
+        ORTHO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    BROWN, Jocelle Joanne
+</td>
+<td>
+    206
+</td>
+<td>
+    INDEFINITE LEAVE
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Vida<br>
+    <span class="secretary-phone">
+    0977 703 4644
+</span>
+</td>
+</tr>
+<tr data-search="ORTHO-SURGEON PACHECO, Deejay Rehab MON (1pm-3pm) WED (4pm-5pm) — Ms. Jo (02) 8531-5080 / 0968 865 7888 ">
+    <td>
+        <span class="specialty-label">
+        ORTHO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    PACHECO, Deejay
+</td>
+<td>
+    Rehab
+</td>
+<td>
+    MON (1pm-3pm) WED (4pm-5pm)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Jo<br>
+    <span class="secretary-phone">
+    (02) 8531-5080 / 0968 865 7888
+</span>
+</td>
+</tr>
+<tr data-search="REHAB MED DIOKNO, Narciso Rehab MON-FRI (10am-12nn) SAT (1pm-3pm) Ms. Jo (02) 8531-5080 / 0968 865 7888 ">
+    <td>
+        <span class="specialty-label">
+        REHAB MED
+    </span>
+</td>
+<td class="doctor-name">
+    DIOKNO, Narciso
+</td>
+<td>
+    Rehab
+</td>
+<td>
+    MON-FRI (10am-12nn)
+</td>
+<td>
+    SAT (1pm-3pm)
+</td>
+<td>
+    Ms. Jo<br>
+    <span class="secretary-phone">
+    (02) 8531-5080 / 0968 865 7888
+</span>
+</td>
+</tr>
+<tr data-search="REHAB MED VIRTUCIO, Anna Liza Rehab WED (4pm-5:00pm) SAT (10am-12nn) Ms. Jo (02) 8531-5080 / 0968 865 7888 ">
+    <td>
+        <span class="specialty-label">
+        REHAB MED
+    </span>
+</td>
+<td class="doctor-name">
+    VIRTUCIO, Anna Liza
+</td>
+<td>
+    Rehab
+</td>
+<td>
+    WED (4pm-5:00pm)
+</td>
+<td>
+    SAT (10am-12nn)
+</td>
+<td>
+    Ms. Jo<br>
+    <span class="secretary-phone">
+    (02) 8531-5080 / 0968 865 7888
+</span>
+</td>
+</tr>
+<tr data-search="REHAB MED PRECILLA, Nathaniel Francis Rehab TUESDAYS 12nn-3pm Ms. Jo (02) 8531-5080 / 0968 865 7888 ">
+    <td>
+        <span class="specialty-label">
+        REHAB MED
+    </span>
+</td>
+<td class="doctor-name">
+    PRECILLA, Nathaniel Francis
+</td>
+<td>
+    Rehab
+</td>
+<td>
+    TUESDAYS
+</td>
+<td>
+    12nn-3pm
+</td>
+<td>
+    Ms. Jo<br>
+    <span class="secretary-phone">
+    (02) 8531-5080 / 0968 865 7888
+</span>
+</td>
+</tr>
+<tr data-search="REHAB MED ESPINOSA, Maria Regina Rehab MON, TUE, THUR &amp; FRI (4pm-5pm) — Ms. Jo (02) 8531-5080 / 0968 865 7888 ">
+    <td>
+        <span class="specialty-label">
+        REHAB MED
+    </span>
+</td>
+<td class="doctor-name">
+    ESPINOSA, Maria Regina
+</td>
+<td>
+    Rehab
+</td>
+<td>
+    MON, TUE, THUR &amp; FRI (4pm-5pm)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Jo<br>
+    <span class="secretary-phone">
+    (02) 8531-5080 / 0968 865 7888
+</span>
+</td>
+</tr>
+<tr data-search="URO-SURGEON BUENO, Dominador 1 MWF 6pm-7:30pm Ms. Sabel 0912 297 1589 / (02) 8728-1028 ">
+    <td>
+        <span class="specialty-label">
+        URO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    BUENO, Dominador
+</td>
+<td>
+    1
+</td>
+<td>
+    MWF
+</td>
+<td>
+    6pm-7:30pm
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="URO-SURGEON PINEDA, Christopher 206 MWF 1pm-3pm Ms. Vida 0977 703 4644 ">
+    <td>
+        <span class="specialty-label">
+        URO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    PINEDA, Christopher
+</td>
+<td>
+    206
+</td>
+<td>
+    MWF
+</td>
+<td>
+    1pm-3pm
+</td>
+<td>
+    Ms. Vida<br>
+    <span class="secretary-phone">
+    0977 703 4644
+</span>
+</td>
+</tr>
+<tr data-search="URO-SURGEON GARCIA, John Mark 210 TUES &amp; THURS 12nn-2pm Ms. Sally 0999 699 7023 HOLD HMOs">
+    <td>
+        <span class="specialty-label">
+        URO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    GARCIA, John Mark<span class="status-tag">
+    HOLD HMOs
+</span>
+</td>
+<td>
+    210
+</td>
+<td>
+    TUES &amp; THURS
+</td>
+<td>
+    12nn-2pm
+</td>
+<td>
+    Ms. Sally<br>
+    <span class="secretary-phone">
+    0999 699 7023
+</span>
+</td>
+</tr>
+<tr data-search="URO-SURGEON SYLING, Justin Bradley 7 WED &amp; FRIDAY 10am-12nn Ms. Rica 0946 227 4586 ">
+    <td>
+        <span class="specialty-label">
+        URO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    SYLING, Justin Bradley
+</td>
+<td>
+    7
+</td>
+<td>
+    WED &amp; FRIDAY
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Rica<br>
+    <span class="secretary-phone">
+    0946 227 4586
+</span>
+</td>
+</tr>
+<tr data-search="URO-SURGEON TRINIDAD, Marc Vincent 202 MWF 10am-12nn Ms. Jobelle 0993 367 3679 ">
+    <td>
+        <span class="specialty-label">
+        URO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    TRINIDAD, Marc Vincent
+</td>
+<td>
+    202
+</td>
+<td>
+    MWF
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Jobelle<br>
+    <span class="secretary-phone">
+    0993 367 3679
+</span>
+</td>
+</tr>
+<tr data-search="URO-SURGEON FLORENCIO, Luis Jr 4 TUES &amp; THURS &amp; SAT 9am-10am Ms. Ruth 0915 718 0631 NO HMO">
+    <td>
+        <span class="specialty-label">
+        URO-SURGEON
+    </span>
+</td>
+<td class="doctor-name">
+    FLORENCIO, Luis Jr<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    4
+</td>
+<td>
+    TUES &amp; THURS &amp; SAT
+</td>
+<td>
+    9am-10am
+</td>
+<td>
+    Ms. Ruth<br>
+    <span class="secretary-phone">
+    0915 718 0631
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA MACASPAC, Catherine 207 MWF 9am-11am Ms. Laleyn 0977 753 3724 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    MACASPAC, Catherine
+</td>
+<td>
+    207
+</td>
+<td>
+    MWF
+</td>
+<td>
+    9am-11am
+</td>
+<td>
+    Ms. Laleyn<br>
+    <span class="secretary-phone">
+    0977 753 3724
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA INOCENTES, Blesilda 102 TUES &amp; SAT 10am-12nn Ms. Sabel 0912 297 1589 / (02) 8728-1028 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    INOCENTES, Blesilda
+</td>
+<td>
+    102
+</td>
+<td>
+    TUES &amp; SAT
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA COMIA, Carmel Angela 201 WED &amp; FRI (10:00am-12:00nn) SAT (8:30-10am) — Ms. Marie 0933 866 2375 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    COMIA, Carmel Angela
+</td>
+<td>
+    201
+</td>
+<td>
+    WED &amp; FRI (10:00am-12:00nn) SAT (8:30-10am)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Marie<br>
+    <span class="secretary-phone">
+    0933 866 2375
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA RIVERA, Jocelyn 202 TUES &amp; THURS (10am-12nn) SAT (9am-11nn) — Ms. Jobelle 0993 367 3679 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    RIVERA, Jocelyn
+</td>
+<td>
+    202
+</td>
+<td>
+    TUES &amp; THURS (10am-12nn) SAT (9am-11nn)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Jobelle<br>
+    <span class="secretary-phone">
+    0993 367 3679
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA ABREA, Anna Mae 203 MON-SAT 2pm-4pm Ms. Ter 0945 647 4158 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    ABREA, Anna Mae
+</td>
+<td>
+    203
+</td>
+<td>
+    MON-SAT
+</td>
+<td>
+    2pm-4pm
+</td>
+<td>
+    Ms. Ter<br>
+    <span class="secretary-phone">
+    0945 647 4158
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA BELARMINO, Vic Constant 3 MWF 1pm-4pm Ms. Mimi 0932 390 8357 NO HMO">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    BELARMINO, Vic Constant<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    3
+</td>
+<td>
+    MWF
+</td>
+<td>
+    1pm-4pm
+</td>
+<td>
+    Ms. Mimi<br>
+    <span class="secretary-phone">
+    0932 390 8357
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA CARASIG, Gianina Lousie 4 MON &amp; FRI 10am-12nn Ms. Ruth 0915 718 0631 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    CARASIG, Gianina Lousie
+</td>
+<td>
+    4
+</td>
+<td>
+    MON &amp; FRI
+</td>
+<td>
+    10am-12nn
+</td>
+<td>
+    Ms. Ruth<br>
+    <span class="secretary-phone">
+    0915 718 0631
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA CACHAPERO, Katrina Concesa 201 SAT 9am-11am Ms. Raquel 0942 357 9607 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    CACHAPERO, Katrina Concesa
+</td>
+<td>
+    201
+</td>
+<td>
+    SAT
+</td>
+<td>
+    9am-11am
+</td>
+<td>
+    Ms. Raquel<br>
+    <span class="secretary-phone">
+    0942 357 9607
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA ATIENZA-CAPISTRANO, Angelica Marie 201 TUES &amp; WED (1pm-3pm) SAT (1pm-2pm) Ms. Marie 0933 866 2375 ">
+    <td>
+        <span class="specialty-label">
+        PEDIA
+    </span>
+</td>
+<td class="doctor-name">
+    ATIENZA-CAPISTRANO, Angelica Marie
+</td>
+<td>
+    201
+</td>
+<td>
+    TUES &amp; WED (1pm-3pm)
+</td>
+<td>
+    SAT (1pm-2pm)
+</td>
+<td>
+    Ms. Marie<br>
+    <span class="secretary-phone">
+    0933 866 2375
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA-NEPHRO ANCHETA, John Paul 4 TUES (1pm-3pm) THURS &amp; SAT 3pm-5pm Ms. Ruth 0915 718 0631 NO HMO">
+    <td>
+        <span class="specialty-label">
+        PEDIA-NEPHRO
+    </span>
+</td>
+<td class="doctor-name">
+    ANCHETA, John Paul<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    4
+</td>
+<td>
+    TUES (1pm-3pm) THURS &amp; SAT
+</td>
+<td>
+    3pm-5pm
+</td>
+<td>
+    Ms. Ruth<br>
+    <span class="secretary-phone">
+    0915 718 0631
+</span>
+</td>
+</tr>
+<tr data-search="PEDIA GASTRO REYES, Katrina Loren 102 MON &amp; FRI 11am-1pm Ms. Sabel 0912 297 1589 / (02) 8728-1028 NO HMO">
+    <td>
+        <span class="specialty-label">
+        PEDIA GASTRO
+    </span>
+</td>
+<td class="doctor-name">
+    REYES, Katrina Loren<span class="status-tag">
+    NO HMO
+</span>
+</td>
+<td>
+    102
+</td>
+<td>
+    MON &amp; FRI
+</td>
+<td>
+    11am-1pm
+</td>
+<td>
+    Ms. Sabel<br>
+    <span class="secretary-phone">
+    0912 297 1589 / (02) 8728-1028
+</span>
+</td>
+</tr>
+<tr data-search="AUDIOLOGIST 2D ECHO 301 BY APPOINTMENT (MAXICARE, INTELLICARE, AVEGA MEDICARD ONLY) — Ms. Leah (2D Echo Tech) 0956-773-0404 ">
+    <td>
+        <span class="specialty-label">
+        AUDIOLOGIST
+    </span>
+</td>
+<td class="doctor-name">
+    2D ECHO
+</td>
+<td>
+    301
+</td>
+<td>
+    BY APPOINTMENT (MAXICARE, INTELLICARE, AVEGA MEDICARD ONLY)
+</td>
+<td>
+    —
+</td>
+<td>
+    Ms. Leah (2D Echo Tech)<br>
+    <span class="secretary-phone">
+    0956-773-0404
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="emptyState" class="empty-state">
+    <i class="fas fa-user-md">
+</i>
+<h4>
+    No matching doctor found
+</h4>
+<p>
+    Try searching with a doctor's last name, specialty, room number, or secretary.
+</p>
+</div>
+</div>
+</div>
+<p class="timetable-footer-note">
+    For appointment confirmation and schedule changes, please contact the secretary listed for the physician.
+</p>
+</div>
+</section>
+</main>
+
+<footer id="footer-1" class="bg-image wide-40 footer division">
+				<div class="container">
+
+
+					<!-- FOOTER CONTENT -->
+					<div class="row">	
+
+
+						<!-- FOOTER INFO -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-info mb-40">
+
+								<!-- Footer Logo -->
+								<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80  pixels) -->
+								<img src="images/footer-logo.png" width="180" height="40" alt="footer-logo">
+
+								<!-- Text -->	
+								<p class="p-sm mt-20">Stay connected with Marikina St. Vincent General Hospital through our social media pages for the latest hospital updates, health information, announcements, and community activities.
+								</p>  
+
+								<!-- Social Icons -->
+								<div class="footer-socials-links mt-20">
+									<ul class="foo-socials text-center clearfix">
+
+										<li><a href="https://www.facebook.com/MSVGH" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
+													
+																																				
+										
+
+									</ul>									
+								</div>	
+							
+							</div>		
+						</div>
+
+
+						<!-- FOOTER CONTACTS -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-box mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Our Location</h5>
+
+								<!-- Address -->
+								<p>35 Bayan-Bayanan Ave.,</p> 
+								<p>Concepcion Uno, Marikina City</p>
+								
+								<!-- Email -->
+								<p class="foo-email mt-20">Email: <a href="mailto:hr.msvgh@gmail.com">hr.msvgh@gmail.com</a></p>
+
+								<!-- Phone -->
+								<p>Phone: (02)8948-0314</p>
+
+							</div>
+						</div>
+
+
+						<!-- FOOTER WORKING HOURS -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-box mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Hospital Hours</h5>
+
+								<!-- Working Hours -->
+								<p class="p-sm">Open 24/7<span></span></p>
+																
+
+							</div>
+						</div>
+
+
+						<!-- FOOTER PHONE NUMBER -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-box mb-40">
+												
+								<!-- Title -->
+								<h5 class="h5-xs">Emergency Cases</h5>
+
+								<!-- Footer List -->
+								<h5 class="h5-xl blue-color">SMS/VIBER: 09956398130</h5>
+                                <h5 class="h5-xl blue-color">LANDLINE: 9480315</h5>
+																																				
+
+							</div>
+						</div>	
+
+
+					</div>	  <!-- END FOOTER CONTENT -->
+
+
+					<!-- FOOTER COPYRIGHT -->
+					<div class="bottom-footer">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="footer-copyright">&copy; 2026 <span>Marikina Saint Vincent General Hospital Inc.</span>. All Rights Reserved</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>	   <!-- End container -->										
+			</footer>	<!-- END FOOTER-1 -->
+
+
+
+
+		</div>	<!-- END PAGE CONTENT -->
+
+
+
+		<!-- EXTERNAL SCRIPTS
+		============================================= -->	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<script src="js/jquery.appear.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>	
+		<script src="js/menu.js"></script>
+		<script src="js/sticky.js"></script>
+		<script src="js/jquery.scrollto.js"></script>
+		<script src="js/materialize.js"></script>	
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>	
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/timetable.js"></script>
+		<script src="js/hero-form.js"></script>
+		<script src="js/contact-form.js"></script>
+		
+		<script src="js/appointment-form.js"></script>
+		<script src="js/jquery.datetimepicker.full.js"></script>		
+		<script src="js/jquery.validate.min.js"></script>	
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/wow.js"></script>	
+	
+		<!-- Custom Script -->		
+		<script src="js/custom.js"></script>
+
+		<script> 
+			new WOW().init();
+		</script>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!-- [if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.min.js" type="text/javascript"></script>
+		<![endif] -->
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->	
+		<!--
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-XXXXX-Y', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+		-->
+		<!-- End Google Analytics -->
+
+	
+<script>
+(function($){
+    var $rows = $('#doctorTable tbody tr');
+    var $search = $('#doctorSearch');
+    var $filter = $('#specialtyFilter');
+    var $count = $('#scheduleCount');
+    var $clear = $('#clearDoctorSearch');
+    var $empty = $('#emptyState');
+
+    var specialties = [];
+    $rows.each(function(){
+        var value = $(this).find('.specialty-label').text().trim();
+        if (value && specialties.indexOf(value) === -1) specialties.push(value);
+    });
+    specialties.sort();
+    $.each(specialties, function(_, specialty){
+        $filter.append($('<option>', {value:specialty, text:specialty}));
+    });
+
+    function normalizeSpecialty(value) {
+    return $.trim(value)
+        .replace(/\s+/g, ' ')
+        .toLowerCase();
+}
+
+function filterRows(){
+    var query = $.trim($search.val()).toLowerCase();
+    var specialty = normalizeSpecialty($filter.val());
+    var visible = 0;
+
+    $rows.each(function(){
+        var $row = $(this);
+
+        var text = ($row.attr('data-search') || '')
+            .toLowerCase();
+
+        var rowSpecialty = normalizeSpecialty(
+            $row.find('.specialty-label').text()
+        );
+
+        var matchQuery = !query || text.indexOf(query) !== -1;
+        var matchSpecialty = !specialty || rowSpecialty === specialty;
+
+        var show = matchQuery && matchSpecialty;
+
+        $row.toggle(show);
+
+        if (show) {
+            visible++;
+        }
+    });
+
+    $count.text(
+        visible + ' doctor schedule' +
+        (visible === 1 ? '' : 's') +
+        ' shown'
+    );
+
+    $empty.toggle(visible === 0);
+    $clear.toggle(!!$search.val());
+}
+
+    $search.on('input', filterRows);
+    $filter.on('change', filterRows);
+    $clear.on('click', function(){ $search.val('').trigger('input').focus(); });
+    filterRows();
+})(jQuery);
+</script>
+</body>
+
+
+
+</html>	

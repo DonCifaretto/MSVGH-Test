@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		
+		<meta name="description" content="Mission and Vision of Marikina St. Vincent General Hospital Inc."/>
+		<meta name="keywords" content="MSVGH, Mission, Vision, Marikina St. Vincent General Hospital, Healthcare, Hospital">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+				
+  		<!-- SITE TITLE -->
+		<title>MSVGH - Mission &amp; Vision</title>
+							
+		<!-- FAVICON AND TOUCH ICONS  -->
+		<link rel="shortcut icon" href="images/website logo.PNG" type="image/x-icon">
+		<link rel="icon" href="images/website logo.PNG" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 	
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet"> 
+
+		<!-- BOOTSTRAP CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+				
+		<!-- FONT ICONS -->
+		<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" rel="stylesheet" crossorigin="anonymous">		
+		<link href="css/flaticon.css" rel="stylesheet">
+
+		<!-- PLUGINS STYLESHEET -->
+		<link href="css/menu.css" rel="stylesheet">	
+		<link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+		<link href="css/magnific-popup.css" rel="stylesheet">	
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/jquery.datetimepicker.min.css" rel="stylesheet">
+				
+		<!-- TEMPLATE CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- RESPONSIVE CSS -->
+		<link href="css/responsive.css" rel="stylesheet"> 
+	
+	</head>
+		<!-- MISSION & VISION PAGE STYLES
+		============================================= -->
+		<style type="text/css">
+
+			/* Main Page */
+			#mission-vision-page {
+				background: #fff;
+			}
+
+			/* Page Intro */
+			#mission-vision-page .mv-intro {
+				padding: 90px 0 70px;
+				text-align: center;
+				background: #f7f9fa;
+			}
+
+			#mission-vision-page .mv-intro .section-id {
+				color: #16a34a;
+			}
+
+			#mission-vision-page .mv-intro h2 {
+				margin-bottom: 18px;
+			}
+
+			#mission-vision-page .mv-intro p {
+				max-width: 720px;
+				margin: 0 auto;
+			}
+
+			/* Mission & Vision */
+			#mission-vision-page .mv-section {
+				padding: 80px 0 60px;
+			}
+
+			#mission-vision-page .mv-card {
+				height: 100%;
+				padding: 40px 35px;
+				background: #fff;
+				border: 1px solid #e7ebed;
+				border-top: 4px solid #16a34a;
+				border-radius: 5px;
+				box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+			}
+
+			#mission-vision-page .mv-card.vision-card {
+				border-top-color: #004a70;
+			}
+
+			#mission-vision-page .mv-icon {
+				width: 58px;
+				height: 58px;
+				margin-bottom: 22px;
+				border-radius: 50%;
+				background: rgba(22, 163, 74, 0.10);
+				color: #16a34a;
+				font-size: 25px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#mission-vision-page .vision-card .mv-icon {
+				background: rgba(0, 74, 112, 0.08);
+				color: #004a70;
+			}
+
+			#mission-vision-page .mv-card h3 {
+				margin-bottom: 17px;
+			}
+
+			#mission-vision-page .mv-card p {
+				margin-bottom: 0;
+				line-height: 1.85;
+			}
+
+			/* Values */
+			#mission-vision-page .values-section {
+				padding: 75px 0 65px;
+				background: #f7f9fa;
+			}
+
+			#mission-vision-page .value-box {
+				height: 100%;
+				padding: 30px 25px;
+				background: #fff;
+				border: 1px solid #e7ebed;
+				border-radius: 5px;
+				text-align: center;
+				box-shadow: 0 4px 16px rgba(0, 0, 0, 0.045);
+			}
+
+			#mission-vision-page .value-icon {
+				margin-bottom: 18px;
+				color: #16a34a;
+				font-size: 30px;
+			}
+
+			#mission-vision-page .value-box h5 {
+				margin-bottom: 12px;
+			}
+
+			#mission-vision-page .value-box p {
+				margin-bottom: 0;
+				line-height: 1.75;
+			}
+
+			/* Philosophy */
+			#mission-vision-page .philosophy-section {
+				padding: 80px 0;
+				background: #fff;
+			}
+
+			#mission-vision-page .philosophy-box {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 40px 45px;
+				background: #f7faf8;
+				border-left: 4px solid #16a34a;
+			}
+
+			#mission-vision-page .philosophy-box h3 {
+				margin-bottom: 15px;
+			}
+
+			#mission-vision-page .philosophy-box p {
+				margin-bottom: 0;
+				line-height: 1.85;
+			}
+
+			/* Closing Message */
+			#mission-vision-page .mv-callout {
+				padding: 60px 0;
+				background: #16a34a;
+				text-align: center;
+			}
+
+			#mission-vision-page .mv-callout h3 {
+				color: #fff;
+				margin-bottom: 10px;
+			}
+
+			#mission-vision-page .mv-callout p {
+				color: rgba(255,255,255,0.9);
+				margin-bottom: 0;
+			}
+
+			#mission-vision-page .mv-callout .btn {
+				margin-top: 25px;
+				background: #fff;
+				border-color: #fff;
+				color: #16a34a;
+			}
+
+			#mission-vision-page .mv-callout .btn:hover {
+				background: #004a70;
+				border-color: #004a70;
+				color: #fff;
+			}
+
+			/* Mobile */
+			@media (max-width: 767px) {
+
+				#mission-vision-page .mv-intro {
+					padding: 65px 15px 55px;
+				}
+
+				#mission-vision-page .mv-section {
+					padding: 55px 15px 35px;
+				}
+
+				#mission-vision-page .mv-card {
+					margin-bottom: 25px;
+				}
+
+				#mission-vision-page .values-section {
+					padding: 55px 15px 40px;
+				}
+
+				#mission-vision-page .value-box {
+					margin-bottom: 20px;
+				}
+
+				#mission-vision-page .philosophy-section {
+					padding: 60px 15px;
+				}
+
+				#mission-vision-page .philosophy-box {
+					padding: 30px 25px;
+				}
+
+			}
+
+		</style>
+
+	</head>
+
+
+	<body>
+
+		<!-- PRELOADER SPINNER
+		============================================= -->
+		<div id="loader-wrapper">
+			<div id="loader"><div class="loader-inner"></div></div>
+		</div>
+
+
+		<!-- PAGE CONTENT
+		============================================= -->
+		<div id="page" class="page">
+
+
+			<!-- HEADER
+			============================================= -->
+			<header id="header" class="header">
+
+
+				<!-- MOBILE HEADER -->
+			    <div class="wsmobileheader clearfix">
+			    	<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+			    	<span class="smllogo"><img src="images/logo.png" width="180" height="40" alt="mobile-logo"/></span>
+			    	<a href="tel:123456789" class="callusbtn"><i class="fas fa-phone"></i></a>
+			 	</div>
+
+
+			 	<!-- HEADER STRIP -->
+			 	<div class="headtoppart bg-blue clearfix">
+			    	<div class="headerwp clearfix">
+
+			    		<!-- Address -->
+			     		<div class="headertopleft">			     			
+			        		<div class="address clearfix"><span><i class="fas fa-map-marker-alt"></i>35 Bayan-Bayanan Ave., Concepcion Uno, Marikina City </span> <a href="tel:123456789" class="callusbtn"><i class="fas fa-phone"></i>(02)8948-0314</a>
+			            	</div>
+			     		</div>
+
+			     		<!-- Social Links -->
+					    <div class="headertopright">
+					    	<a class="googleicon" title="Google" href="#"><i class="fab fa-google"></i> <span class="mobiletext02">Google</span></a>
+					        <a class="linkedinicon" title="Linkedin" href="#"><i class="fab fa-linkedin-in"></i> <span class="mobiletext02">Linkedin</span></a>
+					        <a class="twittericon" title="Twitter" href="#"><i class="fab fa-twitter"></i> <span class="mobiletext02">Twitter</span></a>
+					        <a class="facebookicon" title="Facebook" href="#"><i class="fab fa-facebook-f"></i> <span class="mobiletext02">Facebook</span></a>
+				      	</div>
+
+				    </div>
+			  	</div>	<!-- END HEADER STRIP -->
+
+
+			  	<!-- NAVIGATION MENU -->
+			  	<div class="wsmainfull menu clearfix">
+    				<div class="wsmainwp clearfix">
+
+    					<!-- LOGO IMAGE -->
+    					<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80 pixels) -->
+    					<div class="desktoplogo"><a href="index.html"><img src="images/logo.png"  width="180" height="40" alt="header-logo"></a></div>
+
+    					<!-- MAIN MENU -->
+      					<nav class="wsmenu clearfix">
+        					<ul class="wsmenu-list">
+
+
+        						<!-- DROPDOWN MENU -->
+					        	<li aria-haspopup="true"><a href="index.html">Home </a>
+					           		
+					          	</li>	<!-- END DROPDOWN MENU -->
+
+
+					           	<!-- PAGES -->
+					          	<li aria-haspopup="true"><a href="#">Explore <span class="wsarrow"></span></a>
+            						<div class="wsmegamenu clearfix">
+             							<div class="container">
+               								<div class="row">
+
+               									<!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="index.html">Home</a></li>
+								                    <li><a href="history.html">History</a></li>
+								                    <li><a href="mission-vision.html">Mission &amp; Vision</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="all-services.html">All Services</a></li>
+								                    <li><a href="all-doctors.html">All Doctors</a></li>
+								                    <li><a href="doctors-timetable.html">Doctors Timetable</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="accreditations.html">Accreditations</a></li>
+								                    <li><a href="applications.html">Applications</a></li>
+								                    <li><a href="faqs.html">FAQs</a></li>
+								                </ul>
+
+								                <!-- MEGAMENU LINKS -->
+               									<ul class="col-lg-3 col-md-12 col-xs-12 link-list">
+								                    
+								                    <li><a href="contact us.html">Contact Us</a></li>
+								                    <li><a href="terms.html">Terms</a></li>
+								                </ul>
+
+							                </div>  <!-- End row -->	
+							            </div>  <!-- End container -->	
+							        </div>  <!-- End wsmegamenu -->	
+							    </li>	<!-- END PAGES -->
+
+
+
+					          	
+
+
+					          	
+
+							    
+							    <!-- SIMPLE NAVIGATION LINK -->
+							    <li class="nl-simple" aria-haspopup="true"><a href="terms.html">Patient's Responsibilities</a></li>
+
+							    <!-- NAVIGATION MENU BUTTON -->
+							    
+
+
+        					</ul>
+        				</nav>	<!-- END MAIN MENU -->
+
+    				</div>
+    			</div>	<!-- END NAVIGATION MENU -->
+
+
+			</header>	<!-- END HEADER -->
+
+
+		<!-- MISSION & VISION PAGE
+		============================================= -->
+		<main id="mission-vision-page">
+
+			<!-- PAGE INTRO
+			============================================= -->
+			<section class="mv-intro division">
+				<div class="container">
+
+					<!-- Section ID -->
+					<span class="section-id blue-color">Our Direction</span>
+
+					<!-- Title -->
+					<h2 class="h2-md steelblue-color">Mission &amp; Vision</h2>
+
+					<!-- Text -->
+					<p class="p-md">
+						The principles that guide Marikina St. Vincent General Hospital
+						in providing meaningful, accessible, and continuously improving
+						healthcare to the community.
+					</p>
+
+				</div>
+			</section>
+
+
+			<!-- MISSION & VISION
+			============================================= -->
+			<section class="mv-section division">
+				<div class="container">
+
+					<div class="row">
+
+
+						<!-- MISSION -->
+						<div class="col-lg-6 mb-30">
+							<div class="mv-card wow fadeInUp" data-wow-delay="0.2s">
+
+								<!-- Icon -->
+								<div class="mv-icon">
+									<i class="fas fa-heartbeat"></i>
+								</div>
+
+								<!-- Title -->
+								<h3 class="h3-md steelblue-color">Our Mission</h3>
+
+								<!-- Text -->
+								<p>
+									We are committed in providing the best quality healthcare
+									services that is affordable, effective and accessible to all.
+								</p>
+
+							</div>
+						</div>
+
+
+						<!-- VISION -->
+						<div class="col-lg-6 mb-30">
+							<div class="mv-card vision-card wow fadeInUp" data-wow-delay="0.4s">
+
+								<!-- Icon -->
+								<div class="mv-icon">
+									<i class="fas fa-compass"></i>
+								</div>
+
+								<!-- Title -->
+								<h3 class="h3-md steelblue-color">Our Vision</h3>
+
+								<!-- Text -->
+								<p>
+									To be one of the leading hospitals, exceeding expectations
+									through our continuous improvement in the quality as well as
+									in services.
+								</p>
+
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</section>
+
+
+			<!-- VALUES
+			============================================= -->
+			<section class="values-section division">
+				<div class="container">
+
+					<!-- SECTION TITLE -->
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1 section-title">
+
+							<!-- Section ID -->
+							<span class="section-id blue-color">What We Stand For</span>
+
+							<!-- Title -->
+							<h3 class="h3-md steelblue-color">Our Values</h3>
+
+							<!-- Text -->
+							<p>
+								Our values shape how we care for patients, work with one another,
+								and continue to grow as an institution.
+							</p>
+
+						</div>
+					</div>
+
+
+					<div class="row">
+
+
+						<!-- VALUE #1 -->
+						<div class="col-md-4 mb-30">
+							<div class="value-box wow fadeInUp" data-wow-delay="0.2s">
+
+								<!-- Icon -->
+								<div class="value-icon">
+									<i class="fas fa-user-md"></i>
+								</div>
+
+								<!-- Title -->
+								<h5 class="h5-sm steelblue-color">Patients First</h5>
+
+								<!-- Text -->
+								<p class="p-sm">
+									We strive to put our patients first, keeping their needs,
+									dignity, safety, and well-being.
+								</p>
+
+							</div>
+						</div>
+
+
+						<!-- VALUE #2 -->
+						<div class="col-md-4 mb-30">
+							<div class="value-box wow fadeInUp" data-wow-delay="0.4s">
+
+								<!-- Icon -->
+								<div class="value-icon">
+									<i class="fas fa-chart-line"></i>
+								</div>
+
+								<!-- Title -->
+								<h5 class="h5-sm steelblue-color">Continuous Improvement</h5>
+
+								<!-- Text -->
+								<p class="p-sm">
+									We strive to continuously improve the quality of our
+									healthcare practices, services, and facilities.
+								</p>
+
+							</div>
+						</div>
+
+
+						<!-- VALUE #3 -->
+						<div class="col-md-4 mb-30">
+							<div class="value-box wow fadeInUp" data-wow-delay="0.6s">
+
+								<!-- Icon -->
+								<div class="value-icon">
+									<i class="fas fa-users"></i>
+								</div>
+
+								<!-- Title -->
+								<h5 class="h5-sm steelblue-color">Teamwork</h5>
+
+								<!-- Text -->
+								<p class="p-sm">
+									We succeed through teamwork, shared responsibility,
+									professionalism, and mutual respect.
+								</p>
+
+							</div>
+						</div>
+
+
+					</div>
+
+				</div>
+			</section>
+
+
+			<!-- PHILOSOPHY
+			============================================= -->
+			<section class="philosophy-section division">
+				<div class="container">
+
+					<div class="philosophy-box wow fadeInUp">
+
+						<!-- Title -->
+						<h3 class="h3-md steelblue-color">Care With Purpose</h3>
+
+						<!-- Text -->
+						<p class="p-md">
+							MSVGH was founded on the belief that healing is more than the
+							treatment of illness. It is an act of service to humanity.
+							Compassion, dignity, and the welfare of patients remain at the
+							heart of the hospital's commitment to quality, affordable,
+							effective, and accessible healthcare.
+						</p>
+
+					</div>
+
+				</div>
+			</section>
+
+
+			<!-- CLOSING MESSAGE
+			============================================= -->
+			<section class="mv-callout division">
+				<div class="container">
+
+					<!-- Title -->
+					<h3 class="h3-md">
+						Better care begins with putting people first.
+					</h3>
+
+					<!-- Text -->
+					<p class="p-md">
+						Learn more about the history of MSVGH.
+					</p>
+
+					<!-- Button -->
+					<a href="history.html" class="btn btn-sm">
+						Discover Our Story
+					</a>
+
+				</div>
+			</section>
+
+		</main>
+
+
+			<!-- FOOTER-3
+			============================================= -->
+			<footer id="footer-3" class="wide-40 footer division">
+				<div class="container">
+
+
+					<!-- FOOTER CONTENT -->
+					<div class="row">	
+
+
+						<!-- FOOTER INFO -->
+						<div class="col-md-6 col-lg-4">
+							<div class="footer-info mb-40">
+
+								<!-- Footer Logo -->
+								<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80  pixels) -->
+								<img src="images/footer-logo.png" width="180" height="40" alt="footer-logo">
+
+								<!-- Text -->	
+								<p class="p-sm mt-20">Stay connected with Marikina St. Vincent General Hospital through our social media pages for the latest hospital updates, health information, announcements, and community activities. 
+								</p>
+
+								<!-- Social Icons -->
+								<div class="footer-socials-links mt-20">
+									<ul class="foo-socials text-center clearfix">
+
+										<li><a href="https://www.facebook.com/MSVGH" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
+										
+
+									</ul>									
+								</div> 
+								
+							</div>	
+						</div>
+
+
+						<!-- FOOTER CONTACTS -->
+						<div class="col-md-6 col-lg-3 offset-lg-1">
+							<div class="footer-box mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Our Location</h5>
+
+								<!-- Address -->
+								<p>35 Bayan-Bayanan Ave.,</p> 
+								<p>Concepcion Uno, Marikina City</p>
+								
+								<!-- Email -->
+								<p class="foo-email mt-20">Email: <a href="mailto:hr.msvgh@gmail.com">hr.msvgh@gmail.com</a></p>
+
+								<!-- Phone -->
+								<p>Phone: (02)8948-0314</p>
+
+							</div>
+						</div>
+
+
+						<!-- FOOTER LINKS -->
+						<div class="col-md-6 col-lg-2">
+							<div class="footer-links mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Explore More</h5>
+
+								<!-- Footer Links -->
+								<ul class="foo-links clearfix">
+									<li><a href="history.html">Our History</a></li>
+									<li><a href="applications.html">Careers</a></li>
+									<li><a href="#">FAQs</a></li>									
+								</ul>
+
+							</div>
+						</div>
+
+
+						<!-- FOOTER LINKS -->
+						<div class="col-md-6 col-lg-2">
+							<div class="footer-links mb-40">
+												
+								<!-- Title -->
+								<h5 class="h5-xs">Discover</h5>
+
+								<!-- Footer List -->
+								<ul class="clearfix">																		
+									
+									<li><a href="#">Terms & Privacy</a></li>
+									<li><a href="#">FAQs</a></li>
+																
+								</ul>
+
+							</div>
+						</div>	
+
+
+					</div>	  <!-- END FOOTER CONTENT -->
+
+
+					<!-- FOOTER COPYRIGHT -->
+					<div class="bottom-footer">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="footer-copyright">&copy; 2026 <span> Marikina Saint Vincent General Hospital Inc.</span>. All Rights Reserved</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>	   <!-- End container -->
+			</footer>	<!-- END FOOTER-3 -->
+
+
+
+
+		</div>	<!-- END PAGE CONTENT -->
+		
+
+
+
+		<!-- EXTERNAL SCRIPTS
+		============================================= -->	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<script src="js/jquery.appear.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>	
+		<script src="js/menu.js"></script>
+		<script src="js/sticky.js"></script>
+		<script src="js/jquery.scrollto.js"></script>
+		<script src="js/materialize.js"></script>	
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>	
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/hero-form.js"></script>
+		<script src="js/contact-form.js"></script>
+		
+		<script src="js/appointment-form.js"></script>
+		<script src="js/jquery.datetimepicker.full.js"></script>		
+		<script src="js/jquery.validate.min.js"></script>	
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/wow.js"></script>	
+	
+		<!-- Custom Script -->		
+		<script src="js/custom.js"></script>
+
+		<script> 
+			new WOW().init();
+		</script>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!-- [if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.min.js" type="text/javascript"></script>
+		<![endif] -->
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->	
+		<!--
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-XXXXX-Y', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+		-->
+		<!-- End Google Analytics -->
+
+	</body>
+
+
+
+</html>	
