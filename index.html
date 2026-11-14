@@ -79,7 +79,18 @@
 </style>
 
 	
-<style id="msvgh-smile-train-tab-icon-size">
+
+<style id="msvgh-mobile-hide-service-tab-icons">
+    /* Hide service-tab icons on mobile only. Desktop tabs remain unchanged. */
+    @media screen and (max-width: 767px) {
+        #tabs-1 #pills-tab .nav-link > span,
+        #tabs-1 #pills-tab .nav-link > i {
+            display: none !important;
+        }
+    }
+</style>
+
+	<style id="msvgh-smile-train-tab-icon-size">
 #tab3-list i.far.fa-smile {
     float: left;
     margin-top: -8px;
